@@ -3095,3 +3095,47 @@ ul.icons.social-inline {
 			}
 
 	}
+
+.classement-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+    background: #fff;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.classement-table thead {
+    background: #2c3e50;
+    color: #fff;
+}
+
+.classement-table th, .classement-table td {
+    padding: 0.75em 0.6em;
+    text-align: center;
+}
+
+.classement-table th {
+    padding: 0.8em 0.6em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.classement-table th:nth-child(2),
+.classement-table td:nth-child(2) {
+    text-align: left;
+    padding-left: 1em;
+}
+
+.classement-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.15s;
+}
+
+.classement-table tbody tr:hover { background: #e8f7f5; }
+
+.classement-table td { color: #52575c; }
+
+.classement-table .pts { font-weight: 600; color: #2c3e50; }
