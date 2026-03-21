@@ -161,75 +161,88 @@
 												</p>
 											</nav>
 										</header>
-										<div>
-											<table class="classement-table">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>Équipe</th>
-														<th>J</th>
-														<th>G</th>
-														<th>N</th>
-														<th>P</th>
-														<th>BP</th>
-														<th>BC</th>
-														<th>Diff</th>
-														<th>Pts</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr class="zone-qualification">
-														<td>1</td>
-														<td><img src="images/real-madrid.png" width="17" height="22" alt="Logo Real Madrid"> Real Madrid</td>
-														<td>9</td><td>7</td><td>1</td><td>1</td><td>27</td><td>9</td><td>+18</td><td class="pts">22</td>
-													</tr>
-													<tr class="zone-qualification">
-														<td>2</td>
-														<td><img src="images/barcelona.png" width="19" height="20" alt="Logo Barcelone"> Barcelone</td>
-														<td>9</td><td>6</td><td>2</td><td>1</td><td>24</td><td>10</td><td>+14</td><td class="pts">20</td>
-													</tr>
-													<tr class="zone-qualification">
-														<td>3</td>
-														<td><img src="images/man-city.png" width="19" height="20" alt="Logo Manchester City"> Manchester City</td>
-														<td>9</td><td>6</td><td>0</td><td>3</td><td>21</td><td>11</td><td>+10</td><td class="pts">18</td>
-													</tr>
-													<tr class="zone-qualification">
-														<td>4</td>
-														<td><img src="images/liverpool.png" width="17" height="20" alt="Logo Liverpool FC"> Liverpool FC</td>
-														<td>9</td><td>5</td><td>1</td><td>3</td><td>19</td><td>11</td><td>+8</td><td class="pts">16</td>
-													</tr>
-													<tr class="zone-barrage">
-														<td>5</td>
-														<td><img src="images/bayern.png" width="19" height="20" alt="Logo Bayern Munich"> Bayern Munich</td>
-														<td>9</td><td>4</td><td>1</td><td>4</td><td>16</td><td>13</td><td>+3</td><td class="pts">13</td>
-													</tr>
-													<tr class="zone-barrage">
-														<td>6</td>
-														<td><img src="images/psg.png" width="19" height="20" alt="Logo Paris SG"> Paris SG</td>
-														<td>9</td><td>3</td><td>2</td><td>4</td><td>14</td><td>14</td><td>0</td><td class="pts">11</td>
-													</tr>
-													<tr class="zone-barrage">
-														<td>7</td>
-														<td><img src="images/chelsea.png" width="19" height="20" alt="Logo Chelsea"> Chelsea</td>
-														<td>9</td><td>3</td><td>0</td><td>6</td><td>12</td><td>16</td><td>-4</td><td class="pts">9</td>
-													</tr>
-													<tr class="zone-barrage">
-														<td>8</td>
-														<td><img src="images/juventus.png" width="17" height="20" alt="Logo Juventus"> Juventus</td>
-														<td>9</td><td>2</td><td>1</td><td>6</td><td>10</td><td>19</td><td>-9</td><td class="pts">7</td>
-													</tr>
-													<tr class="zone-elimination">
-														<td>9</td>
-														<td><img src="images/ac-milan.png" width="14" height="20" alt="Logo AC Milan"> AC Milan</td>
-														<td>9</td><td>1</td><td>2</td><td>6</td><td>8</td><td>25</td><td>-17</td><td class="pts">5</td>
-													</tr>
-													<tr class="zone-elimination">
-														<td>10</td>
-														<td><img src="images/inter.png" width="17" height="20" alt="Logo Inter Milan"> Inter Milan</td>
-														<td>9</td><td>1</td><td>0</td><td>8</td><td>6</td><td>29</td><td>-23</td><td class="pts">3</td>
-													</tr>
-												</tbody>
-											</table>
+
+										<input type="radio" name="tabs" id="tab-ligue" class="tab-toggle" checked>
+    									<input type="radio" name="tabs" id="tab-elim" class="tab-toggle">
+										<div class="tab-switcher">
+											<label for="tab-ligue">Vue liste</label>
+											<label for="tab-elim">Vue organigramme</label>
+										</div>
+
+										<div id="panel-ligue">
+											<div>
+												<table class="classement-table">
+													<thead>
+														<tr>
+															<th>#</th>
+															<th>Équipe</th>
+															<th>J</th>
+															<th>G</th>
+															<th>N</th>
+															<th>P</th>
+															<th>BP</th>
+															<th>BC</th>
+															<th>Diff</th>
+															<th>Pts</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="zone-qualification">
+															<td>1</td>
+															<td><img src="images/real-madrid.png" width="17" height="22" alt="Logo Real Madrid"> Real Madrid</td>
+															<td>9</td><td>7</td><td>1</td><td>1</td><td>27</td><td>9</td><td>+18</td><td class="pts">22</td>
+														</tr>
+														<tr class="zone-qualification">
+															<td>2</td>
+															<td><img src="images/barcelona.png" width="19" height="20" alt="Logo Barcelone"> Barcelone</td>
+															<td>9</td><td>6</td><td>2</td><td>1</td><td>24</td><td>10</td><td>+14</td><td class="pts">20</td>
+														</tr>
+														<tr class="zone-qualification">
+															<td>3</td>
+															<td><img src="images/man-city.png" width="19" height="20" alt="Logo Manchester City"> Manchester City</td>
+															<td>9</td><td>6</td><td>0</td><td>3</td><td>21</td><td>11</td><td>+10</td><td class="pts">18</td>
+														</tr>
+														<tr class="zone-qualification">
+															<td>4</td>
+															<td><img src="images/liverpool.png" width="17" height="20" alt="Logo Liverpool FC"> Liverpool FC</td>
+															<td>9</td><td>5</td><td>1</td><td>3</td><td>19</td><td>11</td><td>+8</td><td class="pts">16</td>
+														</tr>
+														<tr class="zone-barrage">
+															<td>5</td>
+															<td><img src="images/bayern.png" width="19" height="20" alt="Logo Bayern Munich"> Bayern Munich</td>
+															<td>9</td><td>4</td><td>1</td><td>4</td><td>16</td><td>13</td><td>+3</td><td class="pts">13</td>
+														</tr>
+														<tr class="zone-barrage">
+															<td>6</td>
+															<td><img src="images/psg.png" width="19" height="20" alt="Logo Paris SG"> Paris SG</td>
+															<td>9</td><td>3</td><td>2</td><td>4</td><td>14</td><td>14</td><td>0</td><td class="pts">11</td>
+														</tr>
+														<tr class="zone-barrage">
+															<td>7</td>
+															<td><img src="images/chelsea.png" width="19" height="20" alt="Logo Chelsea"> Chelsea</td>
+															<td>9</td><td>3</td><td>0</td><td>6</td><td>12</td><td>16</td><td>-4</td><td class="pts">9</td>
+														</tr>
+														<tr class="zone-barrage">
+															<td>8</td>
+															<td><img src="images/juventus.png" width="17" height="20" alt="Logo Juventus"> Juventus</td>
+															<td>9</td><td>2</td><td>1</td><td>6</td><td>10</td><td>19</td><td>-9</td><td class="pts">7</td>
+														</tr>
+														<tr class="zone-elimination">
+															<td>9</td>
+															<td><img src="images/ac-milan.png" width="14" height="20" alt="Logo AC Milan"> AC Milan</td>
+															<td>9</td><td>1</td><td>2</td><td>6</td><td>8</td><td>25</td><td>-17</td><td class="pts">5</td>
+														</tr>
+														<tr class="zone-elimination">
+															<td>10</td>
+															<td><img src="images/inter.png" width="17" height="20" alt="Logo Inter Milan"> Inter Milan</td>
+															<td>9</td><td>1</td><td>0</td><td>8</td><td>6</td><td>29</td><td>-23</td><td class="pts">3</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div id="panel-elim">
+											
 										</div>
 									</article>
 

@@ -3139,3 +3139,34 @@ ul.icons.social-inline {
 .classement-table td { color: #52575c; }
 
 .classement-table .pts { font-weight: 600; color: #2c3e50; }
+
+.tab-switcher {
+    display: flex;
+    background: #2c3e50;
+    border-radius: 2em;
+    padding: 0.3em;
+    width: fit-content;
+    margin: 2em auto;
+    gap: 0.2em;
+}
+ 
+.tab-switcher label {
+    padding: 0.6em 2em;
+    border-radius: 2em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+        
+.tab-toggle { display: none; }
+#panel-ligue { display: block; }
+#panel-elim  { display: none; }
+
+#tab-elim:checked ~ #panel-ligue { display: none; }
+#tab-elim:checked ~ #panel-elim  { display: block; }
+
+#tab-ligue:checked ~ .tab-switcher label[for="tab-ligue"],
+#tab-elim:checked  ~ .tab-switcher label[for="tab-elim"] {
+    background: #002b5c;
+    color: #fff;
+    font-weight: bold;
+}
