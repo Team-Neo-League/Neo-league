@@ -2098,7 +2098,7 @@ ul.icons.social-inline {
 		position: relative;
 		background: #fff;
 		overflow-x: hidden;
-		padding: 6em 0 6em 0;
+		padding: 3em 0 3em 0;
 	}
 
 	.image-wrapper {
@@ -3247,3 +3247,26 @@ ul.icons.social-inline {
     padding: 0 0.3em;
     margin-top: 2em;
 }
+.zone-qualification { border-left: 4px solid #27ae60; }
+.zone-barrage       { border-left: 4px solid #f39c12; }
+.zone-elimination   { border-left: 4px solid #e74c3c; }
+
+.legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	margin-bottom: 2em;
+}
+.legend-item {
+	display: flex;
+	align-items: center;
+	gap: 0.4em;
+}
+.legend-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 2px;
+}
+.dot-green  { background: #27ae60; }
+.dot-orange { background: #f39c12; }
+.dot-red    { background: #e74c3c; }
