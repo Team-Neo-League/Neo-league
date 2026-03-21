@@ -471,7 +471,6 @@ input, select, textarea {
 				}
 
 		.row {
-			margin-top: -50px;
 			margin-left: -50px;
 		}
 
@@ -3270,3 +3269,8 @@ ul.icons.social-inline {
 .dot-green  { background: #27ae60; }
 .dot-orange { background: #f39c12; }
 .dot-red    { background: #e74c3c; }
+
+.img-butteur {
+    max-height: 250px;
+    object-fit: contain;
+}
