@@ -3144,3 +3144,35 @@ ul.icons.social-inline {
 .feature-card {
     border: 1px solid rgba(0,0,0,0.05);
 }
+
+/*BARRE DE RECHERCHE*/
+
+#search-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+
+#search-bar input {
+  height: 45px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  background: #fff;
+}
+
+#search-bar button {
+  height: 45px;
+  padding: 0 14px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+#search-bar button:hover {
+  background: #005fcc;
+}
