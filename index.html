@@ -177,7 +177,66 @@
 					</div>
 				</div>
 
-			
+				<div class="carousel-container">
+					<h2>Témoignages</h2>
+
+					<button class="carousel-btn left">‹</button>
+					<button class="carousel-btn right">›</button>
+
+					<div class="carousel-track">
+
+						<div class="temoignage-card">
+						<p>"Ambiance incroyable à chaque match, on ressent vraiment l’énergie du public."</p>
+						<span>- Karim</span>
+						</div>
+
+						<div class="temoignage-card">
+						<p>"Organisation impeccable, tout est fluide du début à la fin."</p>
+						<span>- Léa</span>
+						</div>
+
+						<div class="temoignage-card">
+						<p>"Une ligue moderne, dynamique, qui donne envie de revenir chaque semaine."</p>
+						<span>- Samir</span>
+						</div>
+
+						<div class="temoignage-card">
+						<p>"Toujours un plaisir de venir, l’ambiance est vraiment unique."</p>
+						<span>- Julie</span>
+						</div>
+
+						<div class="temoignage-card">
+						<p>"Matchs intenses, supporters au top, une vraie expérience sportive."</p>
+						<span>- Hugo</span>
+						</div>
+
+						<div class="temoignage-card">
+						<p>"Super expérience, j’ai adoré l’ambiance et la qualité des matchs."</p>
+						<span>- Nora</span>
+						</div>
+
+						<div class="temoignage-card">
+						<p>"Une identité forte, un style unique, ça change des autres ligues."</p>
+						<span>- Max</span>
+						</div>
+
+					</div>
+				</div>
+
+					<!--Mouv Carroussel -->
+					<script>
+						const track = document.querySelector('.carousel-track');
+						const btnLeft = document.querySelector('.carousel-btn.left');
+						const btnRight = document.querySelector('.carousel-btn.right');
+
+						btnLeft.onclick = () => {
+							track.scrollBy({ left: -350, behavior: 'smooth' });
+						};
+
+						btnRight.onclick = () => {
+							track.scrollBy({ left: 350, behavior: 'smooth' });
+						};
+					</script>
 
 			<!-- Promo -->
 				<div id="promo-wrapper">
