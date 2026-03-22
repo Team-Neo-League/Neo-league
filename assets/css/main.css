@@ -3096,8 +3096,7 @@ ul.icons.social-inline {
 
 	}
 
-	/* Composition */
-/* ===== COMPOSITION ===== */
+/* Composition */
 .players-grid {
     padding: 20px 0;
 }
@@ -3179,4 +3178,8 @@ ul.icons.social-inline {
     gap: 20px;
     padding: 10px 0 !important;
     margin: 0 !important;
+}
+
+#composition{
+	margin: 50px;
 }
