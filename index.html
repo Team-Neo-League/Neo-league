@@ -294,14 +294,15 @@
 						const btnShortsLeft = document.querySelector('.shorts-btn.left');
 						const btnShortsRight = document.querySelector('.shorts-btn.right');
 
-						btnShortsLeft.onclick = () => {
-							shortsTrack.scrollBy({ left: -300, behavior: 'smooth' });
-						};
-
 						btnShortsRight.onclick = () => {
 							shortsTrack.scrollBy({ left: 300, behavior: 'smooth' });
 						};
+
+						btnShortsLeft.onclick = () => {
+							shortsTrack.scrollTo({ left: 0, behavior: 'smooth' });
+						};
 					</script>
+
 
 
 
