@@ -3255,10 +3255,9 @@ ul.icons.social-inline {
 }
 
 
-/* SECTION VIDEOS */
+
 /* SECTION VIDEOS */
 .videos-section {
-  max-width: 1200px;        /* largeur max centrée */
   margin: 100px auto;       /* centre toute la section */
   text-align: center;
 }
