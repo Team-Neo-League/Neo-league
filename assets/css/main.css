@@ -3258,18 +3258,19 @@ ul.icons.social-inline {
 /* SECTION VIDEOS */
 /* SECTION VIDEOS */
 .videos-section {
-  max-width: 1400px;
-  margin: 100px auto;
+  max-width: 1200px;        /* largeur max centrée */
+  margin: 100px auto;       /* centre toute la section */
   text-align: center;
 }
 
 /* Grande vidéo bannière */
 .video-banner {
   width: 100%;
+  max-width: 1000px;        /* limite la largeur pour centrer */
   height: 380px;
   overflow: hidden;
   border-radius: 12px;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto; /* centre la vidéo */
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
@@ -3288,18 +3289,21 @@ ul.icons.social-inline {
 /* CARROUSEL SHORTS */
 .shorts-carousel {
   position: relative;
-  max-width: 1400px;
+  max-width: 1000px;        /* centre le carrousel */
   margin: 0 auto 80px auto;
 }
 
+/* Track des shorts */
 .shorts-track {
   display: flex;
+  justify-content: center;  /* centre les vidéos */
   overflow: hidden;
   scroll-behavior: smooth;
   gap: 30px;
   padding: 10px 0;
 }
 
+/* Carte d’un short */
 .short-card {
   min-width: 260px;
   height: 460px;
@@ -3329,12 +3333,13 @@ ul.icons.social-inline {
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
+/* Position des flèches */
 .shorts-btn.left {
-  left: -120px;
+  left: -50px;   /* rapproché */
 }
 
 .shorts-btn.right {
-  right: -50px;
+  right: -50px;  /* rapproché */
 }
 
 .shorts-btn:hover {

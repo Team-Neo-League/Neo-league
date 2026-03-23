@@ -244,13 +244,13 @@
 					<!-- Grande vidéo YouTube -->
 					<div class="video-banner">
 						<iframe 
-						src="https://www.youtube.com/watch?v=J9i5bvMcgeY&pp=ygUIZm9vdCB1Y2w%3D"
+						src="https://www.youtube.com/embed/wHh23Ez4AwI"
 						allow="autoplay"
 						allowfullscreen>
 						</iframe>
 					</div>
 
-					<h2>Photos & Vidéos</h2>
+					<h2>Vidéos & Shorts</h2>
 
 					<!-- Carrousel de Shorts -->
 					<div class="shorts-carousel">
@@ -261,23 +261,47 @@
 						<div class="shorts-track">
 
 						<div class="short-card">
-							<iframe src="https://www.youtube.com/embed/wHh23Ez4AwI" allowfullscreen></iframe>
+							<iframe src="https://www.youtube.com/embed/D4YDPNICZwA" allowfullscreen></iframe>
 						</div>
 
 						<div class="short-card">
-							<iframe src="https://www.youtube.com/embed/SHORT_ID_2" allowfullscreen></iframe>
+							<iframe src="https://www.youtube.com/embed/pNgFlW8q08g" allowfullscreen></iframe>
 						</div>
 
 						<div class="short-card">
-							<iframe src="https://www.youtube.com/embed/SHORT_ID_3" allowfullscreen></iframe>
+							<iframe src="https://www.youtube.com/embed/KzfyUfMfmkU" allowfullscreen></iframe>
 						</div>
 
 						<div class="short-card">
-							<iframe src="https://www.youtube.com/embed/SHORT_ID_4" allowfullscreen></iframe>
+							<iframe src="https://www.youtube.com/embed/-oHCB1o4eGQ" allowfullscreen></iframe>
+						</div>
+
+						<div class="short-card">
+							<iframe src="https://www.youtube.com/embed/b4_63ZCO54w" allowfullscreen></iframe>
+						</div>
+
+						<div class="short-card">
+							<iframe src="https://www.youtube.com/embed/wzu6elZ2LcA?feature=share" allowfullscreen></iframe>
 						</div>
 
 						</div>
 					</div>
+					
+					<!--Mouv Carroussel Shorts videos-->
+
+					<script>
+						const shortsTrack = document.querySelector('.shorts-track');
+						const btnShortsLeft = document.querySelector('.shorts-btn.left');
+						const btnShortsRight = document.querySelector('.shorts-btn.right');
+
+						btnShortsLeft.onclick = () => {
+							shortsTrack.scrollBy({ left: -300, behavior: 'smooth' });
+						};
+
+						btnShortsRight.onclick = () => {
+							shortsTrack.scrollBy({ left: 300, behavior: 'smooth' });
+						};
+					</script>
 
 
 
