@@ -305,14 +305,54 @@
 
 					<h2>Photos</h2>
 
-					<div class="tetris-block">
-						<img src="images/photo1.jpg" class="big">
-						<img src="images/photo2.jpg" class="tall">
-						<img src="images/photo3.jpg">
-						<img src="images/photo4.jpg" class="wide">
-						<img src="images/photo5.jpg">
-						<img src="images/photo6.jpg">
+					<div class="photo-grid">
+						<img src="images/photosAccueil/acc1.jpg">
+						<img src="images/photosAccueil/acc2.jpg">
+						<img src="images/photosAccueil/acc3.jpg">
+
+						<img src="images/photosAccueil/bayern.jpeg">
+						<img src="images/photosAccueil/bayern2.webp">
+						<img src="images/photosAccueil/city.webp">
+						<img src="images/photosAccueil/city2.webp">
+						<img src="images/photosAccueil/city3.jpg">
+
+						<img src="images/photosAccueil/juventus.jpg">
+						<img src="images/photosAccueil/liverpool.jpg">
+
+						<img src="images/photosAccueil/milan.jpg">
+						<img src="images/photosAccueil/milan2.jpg">
+
+						<img src="images/photosAccueil/real.jpg">
+						<img src="images/photosAccueil/real2.webp">
 					</div>
+
+					<div id="lightbox">
+						<img id="lightbox-img" src="">
+					</div>
+
+
+					<script>
+						const images = document.querySelectorAll('.photo-grid img');
+						const lightbox = document.getElementById('lightbox');
+						const lightboxImg = document.getElementById('lightbox-img');
+
+						images.forEach(img => {
+							img.addEventListener('click', () => {
+								lightboxImg.src = img.src;
+								lightbox.style.display = 'flex';
+							});
+						});
+
+						lightbox.addEventListener('click', () => {
+							lightbox.style.display = 'none';
+						});
+					</script>
+
+
+
+
+
+
 
 
 			<!-- Promo -->
