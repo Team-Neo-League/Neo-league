@@ -10,6 +10,18 @@
 		<meta name="description" content="Page compositio de AC Milan">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link rel="icon" href="images/ballon.png" type="images/png">
+
+        <style>
+        /*Onglets menu interne*/
+            #sectionMenu { text-align:center; margin:2em 0; }
+            #sectionMenu button { margin:0 10px; padding:0.5em 1em; font-weight:bold; cursor:pointer; border:none; background:#0077cc; color:white; border-radius:5px; }
+            #sectionMenu button:hover { background:#005fa3; }
+            #sectionMenu button.active { background:#004080; }
+
+            /* Sections */
+            section { display:none; margin-bottom:3em; }
+            section.active { display:block; }
+        </style>
 	</head>
     <body class="left-sidebar is-preload">
 		<div id="page-wrapper">
@@ -113,7 +125,32 @@
                         <!-- Main -->
                     <h1 hidden>AC Milan</h1>
 
-                    <section id="composition">
+                    <!-- Menu onglets -->
+                        <div id="sectionMenu">
+                            <button class="tabBtn active" data-section="equipe">Équipe</button>
+                            <button class="tabBtn" data-section="palmares">Palmarès</button>
+                        </div>
+
+            
+                    <!-- Scripts -->
+                    <script>
+                        // Onglets Histoire / Équipe / Palmarès
+                        const buttons = document.querySelectorAll(".tabBtn");
+                        const sections = document.querySelectorAll("section");
+
+                        buttons.forEach(btn => {
+                            btn.addEventListener("click", () => {
+                                sections.forEach(sec => sec.classList.remove("active"));
+                                document.getElementById(btn.dataset.section).classList.add("active");
+                                buttons.forEach(b => b.classList.remove("active"));
+                                btn.classList.add("active");
+                            });
+                        });
+                    </script>
+
+                    <!-- JOUEURS -->
+
+                    <section id="equipe" class="active">
                         <h2>Composition</h2>
 
                         <!-- Gardiens -->
