@@ -3144,80 +3144,79 @@ ul.icons.social-inline {
 .feature-card {
     border: 1px solid rgba(0,0,0,0.05);
 }
-/* CSS spécifique billeterie */
-/* HERO Billetterie */
-#hero-billeterie {
-    background: url("images/stade.jpg") center/cover no-repeat;
-    height: 400px;
+/* --- NEWSLETTER SECTION --- */
+
+.newsletter {
+    background: none;
+    text-align: left;
+    color: #ffffff;	
+}
+
+.newsletter h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+	color: white;
+}
+
+.newsletter .intro {
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.newsletter-form {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    gap: 10px;
 }
 
-#hero-billeterie .overlay {
-    background: rgba(0,0,0,0.6);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-#hero-billeterie h1 {
-    color: white;
-    font-size: 3em;
-}
-
-#hero-billeterie p {
-    color: #ddd;
-}
-.billetterie-container {
-    padding: 50px;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
-
-.match-card-billetterie {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.match-card-billetterie input {
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px;
-}
-
-.match-card-billetterie button {
-    background: #00c2ff;
-    color: white;
-    padding: 10px;
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
     border: none;
+	background-color: #0066ff;
+}
+.newsletter-form input[type="submit"]:hover {
+    background-color: grey;
+	color: white;
+}
+
+.btn-newsletter {
+    background: #000;
+    color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
-}
-.popup-confirmation-bill {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    display: none;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.popup-confirmation-bill:target {
+.btn-newsletter:hover {
+    background: #222;
+}
+
+.mention {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* Social icons aligned horizontally */
+.social-inline {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
 }
 
-.popup-box-bill {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
+.social-inline li a {
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    background: #1c3557;
+    transition: 0.3s;
+}
+
+.social-inline li a:hover {
+    background: #2a4c7a;
 }
