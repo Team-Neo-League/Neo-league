@@ -3144,3 +3144,80 @@ ul.icons.social-inline {
 .feature-card {
     border: 1px solid rgba(0,0,0,0.05);
 }
+/* CSS spécifique billeterie */
+/* HERO Billetterie */
+#hero-billeterie {
+    background: url("images/stade.jpg") center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#hero-billeterie .overlay {
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#hero-billeterie h1 {
+    color: white;
+    font-size: 3em;
+}
+
+#hero-billeterie p {
+    color: #ddd;
+}
+.billetterie-container {
+    padding: 50px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.match-card-billetterie {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.match-card-billetterie input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+.match-card-billetterie button {
+    background: #00c2ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.popup-confirmation-bill {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+
+.popup-confirmation-bill:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-box-bill {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
