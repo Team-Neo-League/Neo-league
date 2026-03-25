@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Neo League - Billetterie</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            --primary: #0b5ed7;
+            --primary-dark: #084298;
+            --bg: #f5f7fb;
+            --text: #222;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: 0.05em;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-size: 0.95rem;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem 3rem;
+            display: grid;
+            grid-template-columns: 2fr 1.5fr;
+            gap: 2rem;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .match-list,
+        .ticket-form {
+            background: var(--card-bg);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .match-card {
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: border 0.2s, box-shadow 0.2s, transform 0.1s;
+        }
+
+        .match-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .match-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .match-teams {
+            font-weight: 600;
+        }
+
+        .match-meta {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .match-price {
+            font-weight: 600;
+            color: var(--primary-dark);
+            font-size: 0.95rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background: #e0f2fe;
+            color: #0369a1;
+            margin-top: 0.25rem;
+        }
+
+        .ticket-form h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .field {
+            margin-bottom: 1rem;
+        }
+
+        .field label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            padding: 0.55rem 0.7rem;
+            border-radius: 0.5rem;
+            border: 1px solid #cbd5e1;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border 0.2s, box-shadow 0.2s;
+            background: #f8fafc;
+        }
+
+        .field input:focus,
+        .field select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 1px rgba(11, 94, 215, 0.15);
+            background: #ffffff;
+        }
+
+        .field-inline {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .field-inline .field {
+            flex: 1;
+        }
+
+        .summary {
+            font-size: 0.9rem;
+            background: #f1f5f9;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .summary strong {
+            font-weight: 600;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+            border: none;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.05s, box-shadow 0.1s;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+        }
+
+        button:hover {
+            background: var(--primary-dark);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem 2rem;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        @media (max-width: 900px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Neo League</div>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#">Calendrier</a>
+            <a href="#">Classement</a>
+            <a href="#">Billetterie</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Liste des matchs -->
+        <section class="match-list">
+            <h1>Billetterie matchs Neo League</h1>
+            <p>Sélectionne un match pour réserver tes places.</p>
+
+            <div class="match-card" data-match="Neo FC vs City United" data-date="Samedi 12 avril, 20h00"
+                data-stadium="Neo Arena" data-price="25">
+                <div class="match-info">
+                    <span class="match-teams">Neo FC vs City United</span>
+                    <span class="match-meta">Samedi 12 avril • 20h00 • Neo Arena</span>
+                    <span class="badge">Ligue 1 - Journée 18</span>
+                </div>
+                <div class="match-price">À partir de 25 €</div>
+            </div>
+
+            <div class="match-card" data-match="Neo FC vs River Town" data-date="Dimanche 20 avril, 17h00"
+                data-stadium="Neo Arena" data-price="20">
+                <div class="match-info">
+                    <span class="match-teams">Neo FC vs River Town</span>
+                    <span class="match-meta">Dimanche 20 avril • 17h00 • Neo Arena</span>
+                    <span class="badge">Coupe - Quart de finale</span>
+                </div>
+                <div class="match-price">À partir de 20 €</div>
+            </div>
+
+            <div class="match-card" data-match="Neo FC vs Old Kings" data-date="Samedi 3 mai, 21h00"
+                data-stadium="Neo Arena" data-price="30">
+                <div class="match-info">
+                    <span class="match-teams">Neo FC vs Old Kings</span>
+                    <span class="match-meta">Samedi 3 mai • 21h00 • Neo Arena</span>
+                    <span class="badge">Match de gala</span>
+                </div>
+                <div class="match-price">À partir de 30 €</div>
+            </div>
+        </section>
+
+        <!-- Formulaire de réservation -->
+        <section class="ticket-form">
+            <h2>Réserver mes billets</h2>
+
+            <form id="ticketForm">
+                <div class="summary" id="matchSummary">
+                    <strong>Match sélectionné :</strong> aucun pour le moment.<br />
+                    Sélectionne un match dans la liste à gauche.
+                </div>
+
+                <div class="field">
+                    <label for="category">Catégorie de place</label>
+                    <select id="category" name="category" required>
+                        <option value="">Choisir une catégorie</option>
+                        <option value="Virage">Virage</option>
+                        <option value="Latérale">Latérale</option>
+                        <option value="Centrale">Centrale</option>
+                        <option value="VIP">VIP</option>
+                    </select>
+                </div>
+
+                <div class="field-inline">
+                    <div class="field">
+                        <label for="quantity">Nombre de billets</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required />
+                    </div>
+                    <div class="field">
+                        <label for="price">Prix unitaire (€)</label>
+                        <input type="text" id="price" name="price" readonly />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Total (€)</label>
+                    <input type="text" id="total" readonly />
+                </div>
+
+                <hr style="border:none;border-top:1px solid #e2e8f0;margin:1.25rem 0;" />
+
+                <div class="field-inline">
+                    <div class="field">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" id="firstname" name="firstname" required />
+                    </div>
+                    <div class="field">
+                        <label for="lastname">Nom</label>
+                        <input type="text" id="lastname" name="lastname" required />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="field">
+                    <label for="payment">Mode de paiement</label>
+                    <select id="payment" name="payment" required>
+                        <option value="">Choisir un mode de paiement</option>
+                        <option value="carte">Carte bancaire</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="wallet">Portefeuille Neo League</option>
+                    </select>
+                </div>
+
+                <button type="submit">Confirmer ma réservation</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        © <span id="year"></span> Neo League — Tous droits réservés.
+    </footer>
+
+    <script>
+        const matchCards = document.querySelectorAll(".match-card");
+        const matchSummary = document.getElementById("matchSummary");
+        const priceInput = document.getElementById("price");
+        const quantityInput = document.getElementById("quantity");
+        const totalInput = document.getElementById("total");
+        const form = document.getElementById("ticketForm");
+
+        let currentMatch = null;
+        let currentPrice = 0;
+        const backgroundBilletBase64 = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAD6AlgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAEC";
+        function updateTotal() {
+            totalInput.value = (quantityInput.value * currentPrice).toFixed(2);
+        }
+
+        matchCards.forEach(card => {
+            card.addEventListener("click", () => {
+                currentMatch = card.dataset.match;
+                currentPrice = parseFloat(card.dataset.price);
+
+                priceInput.value = currentPrice.toFixed(2);
+                updateTotal();
+
+                matchSummary.innerHTML = `
+          <strong>Match :</strong> ${card.dataset.match}<br>
+          <strong>Date :</strong> ${card.dataset.date}<br>
+          <strong>Stade :</strong> ${card.dataset.stadium}
+        `;
+            });
+        });
+
+        quantityInput.addEventListener("input", updateTotal);
+
+        form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  if (!currentMatch) {
+    alert("Sélectionne un match avant de réserver.");
+    return;
+  }
+
+  const firstname = document.getElementById("firstname").value;
+  const lastname = document.getElementById("lastname").value;
+  const category = document.getElementById("category").value;
+  const qty = quantityInput.value;
+  const total = totalInput.value;
+
+  // ---- PDF ----
+  const { jsPDF } = window.jspdf;
+
+  const doc = new jsPDF({
+    orientation: "landscape",
+    unit: "px",
+    format: [600, 250]
+  });
+
+  // ---- FOND ----
+  try {
+    doc.addImage(backgroundBilletBase64, "JPEG", 0, 0, 600, 250);
+  } catch (e) {
+    console.error("Erreur chargement image :", e);
+  }
+
+  // ---- STYLE FOOTBALL ----
+  doc.setFont("helvetica", "bold");
+  doc.setTextColor("#ffffff");
+
+  // ---- TITRE ----
+  doc.setFontSize(32);
+  doc.text("NEO LEAGUE", 40, 60);
+
+  // ---- CONTENU ----
+  doc.setFontSize(18);
+  doc.text(`Nom : ${firstname} ${lastname}`, 40, 120);
+  doc.text(`Match : ${currentMatch}`, 40, 150);
+  doc.text(`Catégorie : ${category}`, 40, 180);
+  doc.text(`Quantité : ${qty}`, 40, 210);
+  doc.text(`Total payé : ${total} €`, 40, 240);
+  doc.text("Merci pour votre réservation !", 20, 100);
+
+  // ---- SAVE ----
+  doc.save(`ticket-${firstname}.pdf`);
+
+  // ---- RESET ----
+  form.reset();
+  matchSummary.innerHTML = "Aucun match sélectionné.";
+  priceInput.value = "";
+  totalInput.value = "";
+  currentMatch = null;
+  currentPrice = 0;
+});
+    </script>
+</body>
+
+</html>
