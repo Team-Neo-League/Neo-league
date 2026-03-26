@@ -1905,8 +1905,22 @@ ul.icons.social-inline {
         }
    
         ul.icons.social-inline li a {
-            display: none;
-        }
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2.5em;
+			height: 2.5em;
+			background-color: gray;
+			border-radius: 6px;
+			color: #fff;
+		}
+		ul.icons.social-inline li a:hover {
+			background-color: #76c3ef;
+			color: #001a3a;
+		}
+		ul.icons.social-inline li a .extra {
+			display: none;
+		}
 
 /* Menu */
 
@@ -3151,23 +3165,19 @@ ul.icons.social-inline {
     text-align: left;
     color: #ffffff;	
 }
-
 .newsletter h3 {
     font-size: 1.8rem;
     font-weight: 600;
 	color: white;
 }
-
 .newsletter .intro {
     margin-bottom: 20px;
     opacity: 0.85;
 }
-
 .newsletter-form {
     display: flex;
     gap: 10px;
 }
-
 .newsletter-form input {
     flex: 1;
     padding: 12px;
@@ -3179,44 +3189,7 @@ ul.icons.social-inline {
     background-color: grey;
 	color: white;
 }
-
-.btn-newsletter {
-    background: #000;
-    color: #fff;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn-newsletter:hover {
-    background: #222;
-}
-
 .mention {
     font-size: 0.85rem;
     opacity: 0.8;
-    margin-top: 5px;
-}
-
-/* Social icons aligned horizontally */
-.social-inline {
-    display: flex;
-    gap: 12px;
-    margin-top: 25px;
-}
-
-.social-inline li a {
-    font-size: 1.4rem;
-    color: #fff;
-    padding: 8px;
-    border-radius: 6px;
-    background: #1c3557;
-    transition: 0.3s;
-}
-
-.social-inline li a:hover {
-    background: #2a4c7a;
 }
