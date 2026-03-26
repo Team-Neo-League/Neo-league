@@ -3275,3 +3275,18 @@ ul.icons.social-inline {
     max-height: 250px;
     object-fit: contain;
 }
+.match {
+    border: 1px solid #76c3ef33;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.match h2 {
+    color: #76c3ef;
+	font-weight: 600;
+}
+
+.match p {
+    margin: 0.5rem 0;
+}
