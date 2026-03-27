@@ -3178,6 +3178,7 @@ ul.icons.social-inline {
 }
 
 /* TEMOIGNAGES */
+
 .carousel-container {
   position: relative;
   max-width: 1400px;   
@@ -3214,6 +3215,7 @@ ul.icons.social-inline {
   font-style: italic;
   margin-bottom: 12px;
   line-height: 1.4;
+  font-size: 1.2em;
 }
 
 /* Auteur */
@@ -3484,4 +3486,17 @@ ul.icons.social-inline {
 
 #composition{
     margin: 50px;
+}
+
+
+/*ZONE BOUTON DU PDF */
+#promo-wrapper {
+    padding: 3em 0;          /* réduit la hauteur */
+    margin-bottom: 3em;      /* espace avant le footer */
+}
+
+#promo {
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
 }
