@@ -3257,6 +3257,12 @@ ul.icons.social-inline {
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 
 /* SECTION VIDEOS */
 .videos-section {
