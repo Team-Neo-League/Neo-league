@@ -2334,6 +2334,7 @@ ul.icons.social-inline {
 			border-color: white;
 			color: white;
 			font-size: 1.25em;
+			text-decoration: none;
 		}
 
 			#hero .button:hover {
@@ -2346,8 +2347,12 @@ ul.icons.social-inline {
 			color: #fff;
 			border-color: #fff;
 			border-color: rgba(255, 255, 255, 0.5);
-			border: none;
 		}
+
+			#hero header a{
+				
+				border : none;
+			}
 
 			#hero a:hover {
 				border-color: rgba(255, 255, 255, 0);
