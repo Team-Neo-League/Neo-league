@@ -141,7 +141,6 @@
 						</header>
 					</section>
 
-
 				<!-- Features 1 -->
 					<div class="wrapper">
 						<div class="container">
@@ -232,22 +231,6 @@
 						</div>
 					</div>
 
-						<!--Mouv Carroussel -->
-						<script>
-							const track = document.querySelector('.carousel-track');
-							const btnLeft = document.querySelector('.carousel-btn.left');
-							const btnRight = document.querySelector('.carousel-btn.right');
-
-							btnLeft.onclick = () => {
-								track.scrollBy({ left: -350, behavior: 'smooth' });
-							};
-
-							btnRight.onclick = () => {
-								track.scrollBy({ left: 350, behavior: 'smooth' });
-							};
-						</script>
-
-
 					<div id="videos" class="videos-section">
 
 						<!-- Grande vidéo YouTube -->
@@ -295,22 +278,6 @@
 
 							</div>
 						</div>
-						
-						<!--Mouv Carroussel Shorts videos-->
-
-						<script>
-							const shortsTrack = document.querySelector('.shorts-track');
-							const btnShortsLeft = document.querySelector('.shorts-btn.left');
-							const btnShortsRight = document.querySelector('.shorts-btn.right');
-
-							btnShortsRight.onclick = () => {
-								shortsTrack.scrollBy({ left: 300, behavior: 'smooth' });
-							};
-
-							btnShortsLeft.onclick = () => {
-								shortsTrack.scrollTo({ left: 0, behavior: 'smooth' });
-							};
-						</script>
 
 						<h2>Photos</h2>
 
@@ -345,23 +312,6 @@
 							<img id="lightbox-img" src="">
 						</div>
 
-
-						<script>
-							const images = document.querySelectorAll('.photo-grid img');
-							const lightbox = document.getElementById('lightbox');
-							const lightboxImg = document.getElementById('lightbox-img');
-
-							images.forEach(img => {
-								img.addEventListener('click', () => {
-									lightboxImg.src = img.src;
-									lightbox.style.display = 'flex';
-								});
-							});
-
-							lightbox.addEventListener('click', () => {
-								lightbox.style.display = 'none';
-							});
-						</script>
 					</div>
 				<!-- BOUTON TELECHARGEMENT PROGRAMME-->
 					<div id="promo-wrapper">
@@ -405,6 +355,55 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<!--Mouv Carroussel -->
+			<script>
+				const track = document.querySelector('.carousel-track');
+				const btnLeft = document.querySelector('.carousel-btn.left');
+				const btnRight = document.querySelector('.carousel-btn.right');
+
+				btnLeft.onclick = () => {
+					track.scrollBy({ left: -350, behavior: 'smooth' });
+				};
+
+				btnRight.onclick = () => {
+					track.scrollBy({ left: 350, behavior: 'smooth' });
+				};
+			</script>
+
+			<!--Mouv Carroussel Shorts videos-->
+
+			<script>
+				const shortsTrack = document.querySelector('.shorts-track');
+				const btnShortsLeft = document.querySelector('.shorts-btn.left');
+				const btnShortsRight = document.querySelector('.shorts-btn.right');
+
+				btnShortsRight.onclick = () => {
+					shortsTrack.scrollBy({ left: 300, behavior: 'smooth' });
+				};
+
+				btnShortsLeft.onclick = () => {
+					shortsTrack.scrollTo({ left: 0, behavior: 'smooth' });
+				};
+			</script>
+
+			<!-- Gestion du lightbox : affichage de l'image cliquée en plein écran et fermeture au reclic -->
+			<script>
+				const images = document.querySelectorAll('.photo-grid img');
+				const lightbox = document.getElementById('lightbox');
+				const lightboxImg = document.getElementById('lightbox-img');
+
+				images.forEach(img => {
+					img.addEventListener('click', () => {
+						lightboxImg.src = img.src;
+						lightbox.style.display = 'flex';
+					});
+				});
+
+				lightbox.addEventListener('click', () => {
+					lightbox.style.display = 'none';
+				});
+			</script>
 
 	</body>
 </html>
