@@ -3310,3 +3310,165 @@ ul.icons.social-inline {
     border-radius: 15px;
     text-align: center;
 }
+
+
+/* Layout billetterie */
+.match-list,
+.ticket-form {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+/* Titre bloc */
+.match-list h1,
+.ticket-form h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.6em;
+}
+
+/* Texte intro */
+.match-list p {
+    color: #6b7280;
+    margin-bottom: 1.5em;
+}
+
+/* Cartes de matchs */
+.match-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafbff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    border: 1px solid #e4e7eb;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.match-card:hover {
+    border-color: #2563eb;
+    background: #f8faff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.match-teams {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.match-meta {
+    font-size: 0.9em;
+    color: #6b7280;
+}
+
+.match-price {
+    font-size: 1em;
+    font-weight: 600;
+    color: #0b5ed7;
+}
+
+/* Badge catégorie */
+.badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 3px 10px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.75em;
+}
+
+/* Formulaire */
+.ticket-form label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.ticket-form input,
+.ticket-form select {
+    width: 100%;
+    border-radius: 10px !important;
+    border: 1px solid #d1d5db !important;
+    background: #f9fafb !important;
+    padding: 10px 12px !important;
+    font-size: 0.95em;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+.ticket-form input:focus,
+.ticket-form select:focus {
+    border-color: #2563eb !important;
+    background: #ffffff !important;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
+}
+
+/* Résumé match sélectionné */
+.summary {
+    background: #f3f4f6;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #4b5563;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+/* Bouton */
+.ticket-form button {
+    width: 100%;
+    background: #2563eb !important;
+    color: white !important;
+    font-weight: 600;
+    padding: 12px 0;
+    font-size: 1em;
+    border-radius: 10px;
+    border: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.ticket-form button:hover {
+    background: #1d4ed8 !important;
+}
+/* ============================
+   Alerte de réservation (toast)
+   ============================ */
+   .ticket-alert {
+	position: fixed;
+	top: -80px; /* caché de base */
+	left: 50%;
+	transform: translateX(-50%);
+	background: #0b5ed7;
+	color: white;
+	padding: 16px 26px;
+	border-radius: 14px;
+	font-size: 0.95em;
+	font-weight: 500;
+	box-shadow: 0 8px 25px rgba(11, 94, 215, 0.35);
+	opacity: 0;
+	transition: all 0.5s ease;
+	z-index: 99999;
+	text-align: center;
+	max-width: 90%;
+  }
+  
+  .ticket-alert strong {
+	font-size: 1.05em;
+	display: block;
+	margin-bottom: 6px;
+  }
+  
+  .ticket-alert.show {
+	top: 25px;
+	opacity: 1;
+  }

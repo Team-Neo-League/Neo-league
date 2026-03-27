@@ -14,63 +14,354 @@
     <meta name="keywords" content="html">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=YES">
     <meta name="description" content="billets">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" href="images/ballon.png" type="images/png">
 </head>
-<header>
+
 <body>
-    <section id="hero-billeterie">
-        <div class="overlay">
-            <h1>Billetterie Neo League</h1>
-            <p>Réservez vos places pour les plus grands matchs</p>
-        </div>
-    </section>
-</header>
-<main>
-    <section class="billetterie-container">
+    <div id="reservationAlert" class="ticket-alert"></div>
+    <header>
+       			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header" class="container">
 
-        <div class="match-card">
-            <h2>Real Madrid vs Barcelone</h2>
-            <p>📅 15 Juin 2026</p>
+						<!-- Logo -->
+							<h1 id="logo"><a href="index.html">Accueil</a></h1>
 
-            <form action="#confirmation">
-                <input type="text" placeholder="Nom" required>
-                <input type="number" placeholder="Places" required>
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li>
+                                    <a href="#">Equipes</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Real Madrid</a>
+                                            <ul>
+                                                <li><a href="realMadrid.html">Composition</a></li>
+                                                <li><a href="realMadridPalmares.html">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                   
+                                   
+                                        <li>
+                                            <a href="#">Barcelone</a>
+                                            <ul>
+                                                <li><a href="#">Composition</a></li>
+                                                <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                   
+                                        <li>
+                                            <a href="#">Chelsea</a>
+                                            <ul>
+                                                <li><a href="#">Composition</a></li>
+                                                <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Paris SG</a>
+                                            <ul>
+                                                <li><a href="#">Composition</a></li>
+                                                <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Manchester City</a>
+                                            <ul>
+                                                <li><a href="#">Composition</a></li>
+                                                <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Bayern Munich</a>
+                                            <ul>
+                                                <li><a href="#">Composition</a></li>
+                                                <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Liverpool FC</a>
+                                            <ul>
+                                                <li><a href="#">Composition</a></li>
+                                                <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Juventus</a>
+                                            <ul>
+                                                <li><a href="#">Composition</a></li>
+                                                <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">AC Milan</a>
+                                            <ul>
+                                                <li><a href="#">Composition</a></li>
+                                                <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Inter Milan</a>
+                                            <ul>
+                                                <li><a href="#">Composition</a></li>
+                                                <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+									<li><a href="left-sidebar.html">Classement</a></li>
+									<li class="break"><a href="right-sidebar.html">Billetterie</a></li>
+									<li><a href="no-sidebar.html">Contact</a></li>
+								</ul>
+							</nav>
 
-                <button type="submit">Réserver</button>
+					</div>
+
+    </header>
+
+    <main>
+        <!-- Liste des matchs -->
+        <section class="match-list">
+            <h1>Billetterie matchs Neo League</h1>
+            <p>Sélectionne un match pour réserver tes places.</p>
+
+            <div class="match-card" data-match="Juventus vs Barcelone" data-date="Samedi 12 avril, 20h00"
+                data-stadium="Neo Arena" data-price="25">
+                <div class="match-info">
+                    <span class="match-teams">Juventus vs Barcelone</span>
+                    <span class="match-meta">Samedi 12 avril • 20h00 • Neo Arena</span>
+                    <span class="badge">Ligue 1 - Journée 18</span>
+                </div>
+                <div class="match-price">À partir de 25 €</div>
+            </div>
+
+            <div class="match-card" data-match="FC Bayern vs Paris SG" data-date="Dimanche 20 avril, 17h00"
+                data-stadium="Neo Arena" data-price="20">
+                <div class="match-info">
+                    <span class="match-teams">Bayern Munich vs Paris SG</span>
+                    <span class="match-meta">Dimanche 20 avril • 17h00 • Neo Arena</span>
+                    <span class="badge">Coupe - Quart de finale</span>
+                </div>
+                <div class="match-price">À partir de 20 €</div>
+            </div>
+
+            <div class="match-card" data-match="Real Madrid vs Liverpool FC" data-date="Samedi 17 mai, 18h00"
+                data-stadium="Neo Arena" data-price="30">
+                <div class="match-info">
+                    <span class="match-teams">Real Madrid vs Liverpool FC</span>
+                    <span class="match-meta">Samedi 17 mai • 18h00 • Neo Arena</span>
+                    <span class="badge">Match de gala</span>
+                </div>
+                <div class="match-price">À partir de 30 €</div>
+            </div>
+            <div class="match-card" data-match="AC Milan vs Inter Milan" data-date="Samedi 3 mai, 21h00"
+                data-stadium="Neo Arena" data-price="30">
+                <div class="match-info">
+                    <span class="match-teams">AC Milan vs Inter Milan</span>
+                    <span class="match-meta">Samedi 3 mai • 21h00 • Neo Arena</span>
+                    <span class="badge">Match de gala</span>
+                </div>
+                <div class="match-price">À partir de 30 €</div>
+            </div>
+            <div class="match-card" data-match="Chelsea vs Manchester City" data-date="Lundi 5 mai, 16h00"
+                data-stadium="Neo Arena" data-price="30">
+                <div class="match-info">
+                    <span class="match-teams">Chelsea vs Manchester City</span>
+                    <span class="match-meta">Lundi 5 mai • 16h00 • Neo Arena</span>
+                    <span class="badge">Match de gala</span>
+                </div>
+                <div class="match-price">À partir de 30 €</div>
+            </div>
+        </section>
+
+        <!-- Formulaire de réservation -->
+        <section class="ticket-form">
+            <h2>Réserver mes billets</h2>
+
+            <form id="ticketForm">
+                <div class="summary" id="matchSummary">
+                    <strong>Match sélectionné :</strong> aucun pour le moment.<br />
+                    Sélectionne un match dans la liste à gauche.
+                </div>
+
+                <div class="field">
+                    <label for="category">Catégorie de place</label>
+                    <select id="category" name="category" required>
+                        <option value="">Choisir une catégorie</option>
+                        <option value="Virage">Virage</option>
+                        <option value="Latérale">Latérale</option>
+                        <option value="Centrale">Centrale</option>
+                        <option value="VIP">VIP</option>
+                    </select>
+                </div>
+
+                <div class="field-inline">
+                    <div class="field">
+                        <label for="quantity">Nombre de billets</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required />
+                    </div>
+                    <div class="field">
+                        <label for="price">Prix unitaire (€)</label>
+                        <input type="text" id="price" name="price" readonly />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Total (€)</label>
+                    <input type="text" id="total" readonly />
+                </div>
+
+                <hr style="border:none;border-top:1px solid #e2e8f0;margin:1.25rem 0;" />
+
+                <div class="field-inline">
+                    <div class="field">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" id="firstname" name="firstname" required />
+                    </div>
+                    <div class="field">
+                        <label for="lastname">Nom</label>
+                        <input type="text" id="lastname" name="lastname" required />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="field">
+                    <label for="payment">Mode de paiement</label>
+                    <select id="payment" name="payment" required>
+                        <option value="">Choisir un mode de paiement</option>
+                        <option value="carte">Carte bancaire</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+
+                <button type="submit">Confirmer ma réservation</button>
             </form>
-        </div>
-
-        <div class="match-card">
-            <h2>PSG vs Manchester City</h2>
-            <p>📅 18 Juin 2026</p>
-
-            <form action="#confirmation">
-                <input type="text" placeholder="Nom" required>
-                <input type="number" placeholder="Places" required>
-
-                <button type="submit">Réserver</button>
-            </form>
-        </div>
+        </section>
     </main>
-</section>
-    <footer>
-    <div id="confirmation" class="popup-confirmation">
-        <div class="popup-box">
-            <h2>🎉 Merci !</h2>
-            <p>Votre réservation est confirmée.</p>
-            <a href="right-sidebar.html" class="button">Fermer</a>
-        </div>
-    </div>
-</footer>
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
 
+    <footer>
+				<div id="footer-wrapper">
+					<div id="footer" class="container">
+						<div class="row">
+									<ul class="icons social-inline">
+										<li class="icon brands fa-twitter"><a href="#"><span class="extra">twitter.com/</span></a></li>
+										<li class="icon brands fa-facebook-f"><a href="#"><span class="extra">facebook.com/</span></a></li>
+										<li class="icon brands fa-dribbble"><a href="#"><span class="extra">dribbble.com/</span></a></li>
+										<li class="icon brands fa-instagram"><a href="#"><span class="extra">instagram.com/</span></a></li>
+										<li class="icon brands fa-youtube"><a href="#"><span class="extra">youtube.com/</span></a></li>
+										<li class="icon brands fa-pinterest"><a href="#"><span class="extra">pinterest.com/</span></a></li>
+									</ul>
+
+									
+
+						</div>
+					</div>
+					<div id="copyright" class="container">
+						<ul class="menu">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+						<img src="images/ballon.png" alt="" width= "120" height="100" style="display: block; margin: auto;" />
+					</div>
+				</div>
+
+		</div>
+    </footer>
+
+    <script>
+        const matchCards = document.querySelectorAll(".match-card");
+        const matchSummary = document.getElementById("matchSummary");
+        const priceInput = document.getElementById("price");
+        const quantityInput = document.getElementById("quantity");
+        const totalInput = document.getElementById("total");
+        const form = document.getElementById("ticketForm");
+    
+        let currentMatch = null;
+        let currentPrice = 0;
+    
+        /* ------------------------
+           Mise à jour du total
+        ------------------------ */
+        function updateTotal() {
+            totalInput.value = (quantityInput.value * currentPrice).toFixed(2);
+        }
+    
+        /* ------------------------
+           Sélection du match
+        ------------------------ */
+        matchCards.forEach(card => {
+            card.addEventListener("click", () => {
+                currentMatch = card.dataset.match;
+                currentPrice = parseFloat(card.dataset.price);
+    
+                priceInput.value = currentPrice.toFixed(2);
+                updateTotal();
+    
+                matchSummary.innerHTML = `
+                    <strong>Match :</strong> ${card.dataset.match}<br>
+                    <strong>Date :</strong> ${card.dataset.date}<br>
+                    <strong>Stade :</strong> ${card.dataset.stadium}
+                `;
+            });
+        });
+    
+        quantityInput.addEventListener("input", updateTotal);
+    
+        /* ------------------------
+           Affichage de l'alerte
+        ------------------------ */
+        function showReservationAlert(match, category, qty, total) {
+            const alertBox = document.getElementById("reservationAlert");
+    
+            alertBox.innerHTML = `
+                <strong>✅ Réservation terminée !</strong>
+                Match : ${match} • Catégorie : ${category} • Quantité : ${qty} • Total : ${total} €
+                <br>Hâte de vous voir au match !
+            `;
+    
+            alertBox.classList.add("show");
+    
+            // Disparition automatique
+            setTimeout(() => {
+                alertBox.classList.remove("show");
+            }, 4500);
+        }
+    
+        /*------------------------
+           Soumission du formulaire
+        ------------------------ */
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+    
+            if (!currentMatch) {
+                alert("Sélectionne un match avant de réserver.");
+                return;
+            }
+    
+            const firstname = document.getElementById("firstname").value;
+            const lastname = document.getElementById("lastname").value;
+            const category = document.getElementById("category").value;
+            const qty = quantityInput.value;
+            const total = totalInput.value;
+    
+            // Afficher la notification dynamique
+            showReservationAlert(currentMatch, category, qty, total);
+    
+            // Reset propre
+            form.reset();
+            matchSummary.innerHTML = "Aucun match sélectionné.";
+            priceInput.value = "";
+            totalInput.value = "";
+            currentMatch = null;
+            currentPrice = 0;
+        });
+    </script>
+    
 </body>
 
 </html>
