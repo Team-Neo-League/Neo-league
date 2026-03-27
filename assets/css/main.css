@@ -1904,9 +1904,23 @@ ul.icons.social-inline {
             justify-content: center;
         }
    
-        ul.icons.social-inline li a {
-            display: none;
-        }
+		ul.icons.social-inline li a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2.5em;
+			height: 2.5em;
+			background-color: gray;
+			border-radius: 6px;
+			color: #fff;
+		}
+		ul.icons.social-inline li a:hover {
+			background-color: #76c3ef;
+			color: #001a3a;
+		}
+		ul.icons.social-inline li a .extra {
+			display: none;
+		}
 
 /* Menu */
 
@@ -3100,3 +3114,38 @@ ul.icons.social-inline {
 		color: green;
 		margin-top: 1em;
 	}
+
+
+.newsletter {
+    background: none;
+    text-align: left;
+    color: #ffffff;	
+}
+.newsletter h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+	color: white;
+}
+.newsletter .intro {
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+	background-color: #0066ff;
+}
+.newsletter-form input[type="submit"]:hover {
+    background-color: grey;
+	color: white;
+}
+.mention {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
