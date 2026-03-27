@@ -2211,25 +2211,27 @@ ul.icons.social-inline {
 				}
 
 				#nav > ul > li > span, #nav > ul > li > a {
-					color: #fff;
-					text-decoration: none;
-					outline: 0;
-					border: 0;
-					border: solid 1px rgba(255, 255, 255, 0);
-					border-radius: 0.35em;
-					padding: 0.3em 1em 0.3em 1em;
-					-moz-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					-webkit-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					-o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					-ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-				}
+                    color: #fff;
+                    text-decoration: none;
+                    outline: 0;
+                    border: 0;
+                    border: solid 1px rgba(255, 255, 255, 0);
+                    border-radius: 0.35em;
+                    padding: 0.3em 1em 0.3em 1em;
+                    -moz-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    -webkit-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    -o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    -ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    background-color: rgba(255, 255, 255, 0.15);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(20, 154, 235, 0.7);
+                }
 
-				#nav > ul > li.active > span, #nav > ul > li.active > a {
-					border-color: rgba(255, 255, 255, 0.75);
-					background-color: rgba(255, 255, 255, 0.15);
-					color: #fff;
-				}
+                #nav > ul > li.active > span, #nav > ul > li.active > a, #nav > ul > li > span, #nav > ul > li > a:hover {
+                    background-color: rgba(0, 0, 0, 0.678);
+                    color: #fff;
+                }
+
 
 				#nav > ul > li:first-child {
 					margin-left: 0;
