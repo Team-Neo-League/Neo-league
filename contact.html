@@ -97,38 +97,54 @@
 				<div class="container">
 					<header class="major">
 						<h2>Contact</h2>
-						<p>N’hésitez pas à nous contacter pour toute question ou collaboration concernant Néo-League.</p>
+						<p>N’hésitez pas à nous contacter pour toute question ou collaboration concernant Neo-League.</p>
 					</header>
 
 					<section id="contact-form">
-						<form id="contactForm">
+						<form id="contactForm" action="#" method="post" novalidate>
 							<div class="row gtr-50">
-								<div class="col-6 col-12-mobile">
-									<input type="text" name="name" placeholder="Nom" required />
-								</div>
-								<div class="col-6 col-12-mobile">
-									<input type="email" name="email" placeholder="Email" required />
-								</div>
-								<div class="col-12">
-									<input type="text" name="subject" placeholder="Sujet" required />
-								</div>
-								<div class="col-12">
-									<textarea name="message" placeholder="Votre message..." rows="6" required></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><input type="submit" value="Envoyer" /></li>
-									</ul>
-								</div>
+							  <div class="col-6 col-12-mobile">
+								<label for="name">Nom</label>
+								<input type="text" id="name" name="name" placeholder="Nom" required autocomplete="name" />
+							  </div>
+							  <div class="col-6 col-12-mobile">
+								<label for="email">Email</label>
+								<input 
+									type="email" 
+									id="email" 
+									name="email" 
+									placeholder="Email" 
+									required 
+									autocomplete="email"
+									pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+									title="Veuillez entrer une adresse email valide (ex: nom@domaine.com)"
+								/>
+							  </div>
+							  <div class="col-12">
+								<label for="subject">Sujet</label>
+								<input type="text" id="subject" name="subject" placeholder="Sujet" required />
+							  </div>
+							  <div class="col-12">
+								<label for="message">Message</label>
+								<textarea id="message" name="message" placeholder="Votre message..." rows="6" required></textarea>
+							  </div>
+							  <div class="col-12">
+								<ul class="actions">
+								  <li>
+									<button type="submit">Envoyer</button>
+								  </li>
+								</ul>
+							  </div>
 							</div>
-						</form>
+						  </form>
 						<p id="successMessage">Merci, nous vous recontacterons dès que possible !</p>
 					</section>
 
 					<section id="contact-info">
 						<h3>Informations</h3>
-						<p>Email : contact@neo-league.com</p>
-						<p>Adresse : Bruxelles, Belgique</p>
+						<p>Email : <a href="mailto:contact@neo-league.com">contact@neo-league.com</a></p>
+						<p>Adresse : <a href="https://maps.google.com/?q=Av.+de+l'Astronomie+19,+1210+Saint-Josse-ten-Noode" target="_blank">Av. de l'Astronomie 19, 1210 Saint-Josse-ten-Noode</a></p>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.901494628762!2d4.366918776954329!3d50.85150835840544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4ce9cfb50cf%3A0xecd042e116ed41ac!2sEPFC%20-%20Enseignement%20de%20Promotion%20et%20de%20Formation%20Continue%20de%20l&#39;ULB%20et%20de%20Beci!5e0!3m2!1sfr!2sbe!4v1774616909382!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</section>
 				</div>
 			</div>
@@ -162,44 +178,31 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 			<script>
-			// JS pour créer et télécharger le fichier JSON
-			document.getElementById("contactForm").addEventListener("submit", function(e){
-				e.preventDefault();
+				document.getElementById('contactForm').addEventListener('submit', function(e) {
+				  e.preventDefault();
+				
+				  const name = document.getElementById('name').value.trim();
+				  const email = document.getElementById('email').value.trim();
+				  const subject = document.getElementById('subject').value.trim();
+				  const message = document.getElementById('message').value.trim();
+				
+				  if (!name || !email || !subject || !message) {
+					alert('Veuillez remplir tous les champs.');
+					return;
+				  }
+				
+				  // Vérification du @ dans l'email
+				  const emailInput = document.getElementById('email');
 
-				const form = e.target;
-				const name = form.name.value.trim() || "contact";
-				const email = form.email.value.trim();
-				const subject = form.subject.value.trim();
-				const message = form.message.value.trim();
-
-				// Nettoyage du nom pour le fichier
-				let safeName = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9_-]/g,'_');
-
-				const data = {
-					name: name,
-					email: email,
-					subject: subject,
-					message: message,
-					date: new Date().toISOString()
-				};
-
-				const jsonStr = JSON.stringify(data, null, 4);
-
-				// Création du fichier JSON et téléchargement automatique
-				const blob = new Blob([jsonStr], {type: "application/json"});
-				const url = URL.createObjectURL(blob);
-				const a = document.createElement("a");
-				a.href = url;
-				a.download = safeName + ".json";
-				a.click();
-				URL.revokeObjectURL(url);
-
-				// Notification et reset du formulaire
-				document.getElementById("successMessage").style.display = "block";
-				form.reset();
-			});
+					if (!emailInput.checkValidity()) {
+					alert("Veuillez entrer une adresse email valide (ex: nom@domaine.com)");
+					return;
+					}
+				
+				  document.getElementById('successMessage').style.display = 'block';
+				  this.reset();
+				});
 			</script>
 
 	</body>

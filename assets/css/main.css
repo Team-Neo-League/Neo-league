@@ -3095,3 +3095,8 @@ ul.icons.social-inline {
 			}
 
 	}
+	#successMessage {
+		display: none;
+		color: green;
+		margin-top: 1em;
+	}
