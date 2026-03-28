@@ -3193,7 +3193,9 @@ ul.icons.social-inline {
     padding: 10px 0 !important;
     margin: 0 !important;
 }
-
+.composition-row li{
+	list-style: none;
+}
 #composition{
 	margin: 50px;
 }
