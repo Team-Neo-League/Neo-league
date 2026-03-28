@@ -133,9 +133,9 @@
                     <label for="ticketType">Type de billet</label>
                     <select id="ticketType" name="ticketType" required>
                         <option value="">Choisir un type</option>
-                        <option value="journalier">Ticket journalier</option>
-                        <option value="pass">Pass événement</option>
-                        <option value="reduit">Tarif réduit</option>
+                        <option value="Standart">Ticket standart</option>
+                        <option value="Supporter">Pass supporter</option>
+                        <option value="Enfant">Tarif enfant</option>
                     </select>
                     <label for="quantity">Nombre</label>
                     <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
@@ -232,9 +232,9 @@
             "VIP": 1.8
         };
         const coefTypeBillet = {
-            "journalier": 1,
-            "pass": 0.8,
-            "reduit": 0.6
+            "Standart": 1,
+            "Supporter": 0.8,
+            "Enfant": 0.6
         };
 
         // Arrondi à 0.50€ près

@@ -3313,6 +3313,21 @@ ul.icons.social-inline {
 
 
 /* Layout billetterie */
+#ticketType {
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    padding: 10px 12px;
+    font-size: 0.95em;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+#ticketType:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
+}
 .match-list,
 .ticket-form {
     background: #ffffff;
@@ -3323,7 +3338,7 @@ ul.icons.social-inline {
 }
 
 /* Titre bloc */
-.match-list h1,
+.match-list h2,
 .ticket-form h2 {
     font-size: 1.8em;
     font-weight: 600;
@@ -3472,3 +3487,285 @@ ul.icons.social-inline {
 	top: 25px;
 	opacity: 1;
   }
+  /* ==========================================================================
+   FIL D’ARIANE (Breadcrumb)
+   ========================================================================== */
+.breadcrumb {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5em 0 0 75px;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "›";
+    margin-left: 0.5em;
+}
+
+.breadcrumb a {
+    color: #76c3ef;
+    border: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+    color: #52575c;
+}
+
+
+/* ==========================================================================
+   BILLETERIE — LISTE MATCHS
+   ========================================================================== */
+
+.match-list {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 2em;
+}
+
+.match-list h1 {
+    margin-bottom: 0.6em;
+    font-size: 1.8em;
+}
+
+.match-list p {
+    margin-bottom: 1.5em;
+    opacity: 0.85;
+}
+
+.match-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.match-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafbff;
+    border: 1px solid #e4e7eb;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.match-card:hover,
+.match-card.selected {
+    border-color: #2563eb;
+    background: #f1f6ff;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.match-teams {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #1f2937;
+}
+
+.match-meta {
+    font-size: 0.9em;
+    color: #6b7280;
+}
+
+.badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 3px 10px;
+    border-radius: 30px;
+    font-size: 0.75em;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.match-price {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+
+/* ==========================================================================
+   BILLETERIE — FORMULAIRE
+   ========================================================================== */
+
+.ticket-form {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.ticket-form h2 {
+    margin-bottom: 1em;
+}
+
+.ticket-form fieldset {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 1.5em;
+}
+
+.ticket-form legend {
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.ticket-form label {
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+}
+
+.ticket-form input,
+.ticket-form select {
+    width: 100%;
+    padding: 10px 12px;
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+}
+
+.ticket-form input:focus,
+.ticket-form select:focus {
+    border-color: #2563eb;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
+}
+
+.ticket-form button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1em;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.ticket-form button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================================================
+   BILLETERIE — TOAST / ALERTE
+   ========================================================================== */
+
+.ticket-alert {
+    position: fixed;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0b5ed7;
+    color: white;
+    padding: 16px 26px;
+    border-radius: 12px;
+    font-size: 0.95em;
+    font-weight: 500;
+    box-shadow: 0 8px 25px rgba(11, 94, 215, 0.35);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 9999;
+    max-width: 90%;
+    text-align: center;
+    line-height: 1.4em;
+}
+
+.ticket-alert.show {
+    top: 25px;
+    opacity: 1;
+}
+
+.ticket-alert .alert-title {
+    font-weight: 700;
+    margin: 0;
+}
+
+.ticket-alert .alert-line {
+    margin: 0.2em 0;
+}
+
+.ticket-alert .alert-footer {
+    opacity: 0.85;
+    font-size: 0.9em;
+}
+
+
+/* ==========================================================================
+   FOOTER — NEWSLETTER ET ICONES
+   ========================================================================== */
+
+.newsletter {
+    background: none;
+    text-align: left;
+    color: #ffffff;
+}
+
+.newsletter h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.newsletter .intro {
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.newsletter-form button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #0066ff;
+    font-size: inherit;
+    color: white;
+}
+
+.newsletter-form button:hover {
+    background-color: grey;
+}
+
+.mention {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
