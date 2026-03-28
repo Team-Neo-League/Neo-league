@@ -55,17 +55,17 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="manchesterCity.html">Paris SG</a>
-                                            <ul>
-                                                <li><a href="manchesterCity.html#composition">Composition</a></li>
-                                                <li><a href="manchesterCity.html#palmares">Palmarès</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Manchester City</a>
+                                            <a href="#">Paris SG</a>
                                             <ul>
                                                 <li><a href="#">Composition</a></li>
                                                 <li><a href="#">Palmarès</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="manchesterCity.html">Manchester City</a>
+                                            <ul>
+                                                <li><a href="manchesterCity.html#composition">Composition</a></li>
+                                                <li><a href="manchesterCity.html#palmares">Palmarès</a></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -119,10 +119,8 @@
 					<h1 hidden>Neo league</h1>
 					<div class="container" id="main">
 						<div class="row gtr-150">
-							<div class="col-4 col-12-narrower">
-
+							<aside class="col-4 col-12-narrower">
 								<!-- Sidebar -->
-									<div>
 										<section class="match">
 											<h2>Infos pratiques</h2>
 											<ul>
@@ -141,12 +139,10 @@
 												<li><a href="https://www.footmercato.net/live/168616251451533758-real-madrid-vs-barcelone" class="button" target="_blank">Voir le résumé</a></li>
 											</ul>
 										</section>
-									</div>
-							</div>
+							</aside>
 							<div class="col-8 col-12-narrower imp-narrower">
 
 									<article id="content">
-										<h2 hidden>classement</h2>
 										<input type="radio" name="tabs" id="tab-ligue" class="tab-toggle" checked>
     									<input type="radio" name="tabs" id="tab-elim" class="tab-toggle">
 										<div class="tab-switcher">
@@ -155,21 +151,21 @@
 										</div>
 
 										<div id="panel-ligue">
-											<div class="legend">
-												<div class="legend-item">
-													<div class="legend-dot dot-green"></div>
+											<ul class="legend">
+												<li class="legend-item">
+													<span class="legend-dot dot-green"></span>
 													<span>Qualification (Top 4)</span>
-												</div>
-												<div class="legend-item">
-													<div class="legend-dot dot-orange"></div>
+												</li>
+												<li class="legend-item">
+													<span class="legend-dot dot-orange"></span>
 													<span>Barrage (5e – 8e)</span>
-												</div>
-												<div class="legend-item">
-													<div class="legend-dot dot-red"></div>
+												</li>
+												<li class="legend-item">
+													<span class="legend-dot dot-red"></span>
 													<span>Élimination</span>
-												</div>
-											</div>
-											<div>
+												</li>
+											</ul>
+											
 												<table class="classement-table">
 													<thead>
 														<tr>
@@ -238,13 +234,13 @@
 														</tr>
 													</tbody>
 												</table>
-											</div>
+											
 										</div>
 										<div id="panel-elim">
-											<div class="bracket-wrapper">
+											
 												<div class="bracket">
-													<div class="bracket-round">
-														<div class="bracket-round-title">Quarts de finale</div>
+													<section class="bracket-round">
+														<h4 class="bracket-round-title">Quarts de finale</h4>
 														<div class="bracket-matches">
 															<div class="bracket-match">
 																<div class="bracket-team winner">Real Madrid <span class="bracket-score"> 3</span></div>
@@ -264,10 +260,10 @@
 															</div>
 
 														</div>
-													</div>
-													<div class="bracket-round">
-														<div class="bracket-round-title">Demi-finales</div>
-														<div class="bracket-matches" style="justify-content: space-evenly; padding-top: 3em; padding-bottom: 3em;">
+													</section>
+													<section class="bracket-round">
+														<h4 class="bracket-round-title">Demi-finales</h4>
+														<div class="bracket-matches">
 															<div class="bracket-match">
 																<div class="bracket-team">Real Madrid </div>
 																<div class="bracket-team next">à venir </div>
@@ -277,10 +273,10 @@
 																<div class="bracket-team next">à venir </div>
 															</div>
 														</div>
-													</div>
-													<div class="bracket-round">
-														<div class="bracket-round-title">Finale</div>
-														<div class="bracket-matches" style="justify-content: center;">
+													</section>
+													<section class="bracket-round">
+														<h4 class="bracket-round-title">Finale</h4>
+														<div class="bracket-matches">
 
 															<div class="bracket-match">
 																<div class="bracket-team next">à venir </div>
@@ -288,10 +284,10 @@
 															</div>
 
 														</div>
-													</div>
-													<div class="bracket-trophy">🏆</div>
+													</section>
+													<span class="bracket-trophy">🏆</span>
 												</div>
-											</div>
+											
 										</div>
 									</article>
 
@@ -313,7 +309,7 @@
 									<img src="images/MBAPPE.png" alt="Mbappe" class="img-butteur image featured">
 								</div>
 								<h3>Meilleur buteur</h3>
-								<p>Mbappe</p><p> 3 buts en 1 matchs</p>
+								<p>Mbappe</p><p> 3 buts en 1 match</p>
 							</section>
 							<section class="col-4 col-12-narrower feature">
 								<div class="image-wrapper">
@@ -332,8 +328,7 @@
 			<!-- Footer -->
 				<footer id="footer-wrapper">
 					<div id="footer" class="container">
-						<div>
-							<div class="newsletter">
+							<section class="newsletter">
 								<h3>Newsletter</h3>
 								<p class="intro">Restez informé.</p>
 								<form class="newsletter-form" method="post" action="#">
@@ -342,7 +337,7 @@
 								  <input type="submit" value="S'inscrire →">
 								</form>
 								<p class="mention">Aucun spam. Désabonnement possible à tout moment.</p>
-							</div>
+							</section>
 
 							<ul class="icons social-inline">
 								<li><a href="https://x.com/i/flow/login" target="_blank" class="icon brands fa-twitter"><span class="extra">twitter.com/</span></a></li>
@@ -350,7 +345,7 @@
 								<li><a href="https://www.instagram.com/accounts/login" target="_blank" class="icon brands fa-instagram"><span class="extra">instagram.com/</span></a></li>
 								<li><a href="https://www.youtube.com/" target="_blank" class="icon brands fa-youtube"><span class="extra">youtube.com/</span></a></li>
 							</ul>
-						</div>
+
 					</div>
 					<div id="copyright" class="container">
 						<ul class="menu">
