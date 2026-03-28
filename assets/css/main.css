@@ -3255,10 +3255,8 @@ ul.icons.social-inline {
 
 .bracket-trophy {
     font-size: 2.5em;
-    display: flex;
-    align-items: center;
     padding: 0 0.3em;
-    margin-top: 2em;
+    align-self: center;
 }
 .zone-qualification { border-left: 4px solid #27ae60; }
 .zone-barrage       { border-left: 4px solid #f39c12; }
