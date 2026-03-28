@@ -3219,10 +3219,16 @@ ul.icons.social-inline {
     flex: 1;
     padding: 12px;
     border-radius: 6px;
+}
+.newsletter-form button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
     border: none;
 	background-color: #0066ff;
+	font-size: inherit;
 }
-.newsletter-form input[type="submit"]:hover {
+.newsletter-form button[type="submit"]:hover {
     background-color: grey;
 	color: white;
 }
