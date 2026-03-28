@@ -2,30 +2,26 @@
 <html lang="fr">
 
 <head>
+    <meta charset="utf-8">
     <title>Neo League - Billetterie</title>
-    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Tafaj Arian">
-    <meta name="keywords" content="billetterie, football, tickets">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <meta name="description" content="Billetterie officielle des matchs Neo League. Réservez vos billets.">
-
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-
+    <meta name="description" content="Billetterie officielle des matchs Neo League.">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="icon" href="images/ballon.png" type="image/png">
 </head>
 
-
 <body>
-
-    <div id="reservationAlert" class="ticket-alert" role="alert"></div>
+    <h1 hidden>Neo League</h1>
+    <!-- Toast Notification -->
+    <div id="reservationAlert" class="ticket-alert" role="status" aria-live="polite"></div>
 
     <!-- HEADER -->
     <header>
         <div id="header-wrapper">
             <div id="header" class="container">
-                <h1 id="logo"><a href="index.html">Accueil</a></h1>
+
+                <h2 id="logo"><a href="index.html">Accueil</a></h2>
 
                 <nav id="nav">
                     <ul>
@@ -61,96 +57,71 @@
         </div>
     </header>
 
+    <!-- Fil d'Ariane -->
+    <nav aria-label="Fil d'Ariane" class="breadcrumb">
+        <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li aria-current="page">Billetterie</li>
+        </ol>
+    </nav>
+
     <!-- MAIN -->
     <main>
 
-        <!-- LISTE MATCHS -->
+        <!-- LISTE DES MATCHS -->
         <section class="match-list">
-            <h1>Billetterie matchs Neo League</h1>
-            <p>Sélectionne un match pour réserver.</p>
+            <h2>Billetterie Neo League</h2>
+            <p>Sélectionne un match pour réserver tes billets.</p>
 
-            <!-- Carte match réutilisable + accessibilité -->
-            <div class="match-card" tabindex="0"
-                data-match="Juventus vs Barcelone"
-                data-date="Samedi 12 avril, 20h00"
-                data-stadium="Neo Arena"
-                data-price="25">
-                <div class="match-info">
-                    <span class="match-teams">Juventus vs Barcelone</span>
-                    <span class="match-meta">Samedi 12 avril • 20h00 • Neo Arena</span>
-                    <span class="badge">Ligue 1 - Journée 18</span>
-                </div>
-                <div class="match-price">À partir de 25 €</div>
-            </div>
+            <ul class="match-ul">
 
-            <div class="match-card" tabindex="0"
-                data-match="FC Bayern vs Paris SG"
-                data-date="Dimanche 20 avril, 17h00"
-                data-stadium="Neo Arena"
-                data-price="20">
-                <div class="match-info">
-                    <span class="match-teams">Bayern Munich vs Paris SG</span>
-                    <span class="match-meta">Dimanche 20 avril • 17h00 • Neo Arena</span>
-                    <span class="badge">Coupe - Quart de finale</span>
-                </div>
-                <div class="match-price">À partir de 20 €</div>
-            </div>
+                <!-- Match -->
+                <li class="match-card" tabindex="0" data-match="Juventus vs Barcelone"
+                    data-date="Samedi 12 avril, 20h00" data-stadium="Neo Arena" data-price="25">
+                    <article class="match-info">
+                        <h3 class="match-teams">Juventus vs Barcelone</h3>
+                        <p class="match-meta">Samedi 12 avril • 20h00 • Neo Arena</p>
+                        <span class="badge">Ligue 1 – Journée 18</span>
+                    </article>
+                    <p class="match-price">À partir de 25 €</p>
+                </li>
 
-            <div class="match-card" tabindex="0"
-                data-match="Real Madrid vs Liverpool FC"
-                data-date="Samedi 17 mai, 18h00"
-                data-stadium="Neo Arena"
-                data-price="30">
-                <div class="match-info">
-                    <span class="match-teams">Real Madrid vs Liverpool FC</span>
-                    <span class="match-meta">Samedi 17 mai • 18h00 • Neo Arena</span>
-                    <span class="badge">Match de gala</span>
-                </div>
-                <div class="match-price">À partir de 30 €</div>
-            </div>
+                <li class="match-card" tabindex="0" data-match="Bayern Munich vs Paris SG"
+                    data-date="Dimanche 20 avril, 17h00" data-stadium="Neo Arena" data-price="20">
+                    <article class="match-info">
+                        <h3 class="match-teams">Bayern Munich vs Paris SG</h3>
+                        <p class="match-meta">Dimanche 20 avril • 17h00 • Neo Arena</p>
+                        <span class="badge">Coupe – Quart de finale</span>
+                    </article>
+                    <p class="match-price">À partir de 20 €</p>
+                </li>
 
-            <div class="match-card" tabindex="0"
-                data-match="AC Milan vs Inter Milan"
-                data-date="Samedi 3 mai, 21h00"
-                data-stadium="Neo Arena"
-                data-price="30">
-                <div class="match-info">
-                    <span class="match-teams">AC Milan vs Inter Milan</span>
-                    <span class="match-meta">Samedi 3 mai • 21h00 • Neo Arena</span>
-                    <span class="badge">Match de gala</span>
-                </div>
-                <div class="match-price">À partir de 15 €</div>
-            </div>
+                <li class="match-card" tabindex="0" data-match="Real Madrid vs Liverpool FC"
+                    data-date="Samedi 17 mai, 18h00" data-stadium="Neo Arena" data-price="30">
+                    <article class="match-info">
+                        <h3 class="match-teams">Real Madrid vs Liverpool FC</h3>
+                        <p class="match-meta">Samedi 17 mai • 18h00 • Neo Arena</p>
+                        <span class="badge">Match de gala</span>
+                    </article>
+                    <p class="match-price">À partir de 30 €</p>
+                </li>
 
-            <div class="match-card" tabindex="0"
-                data-match="Chelsea vs Manchester City"
-                data-date="Lundi 5 mai, 16h00"
-                data-stadium="Neo Arena"
-                data-price="30">
-                <div class="match-info">
-                    <span class="match-teams">Chelsea vs Manchester City</span>
-                    <span class="match-meta">Lundi 5 mai • 16h00 • Neo Arena</span>
-                    <span class="badge">Match de gala</span>
-                </div>
-                <div class="match-price">À partir de 25 €</div>
-            </div>
-
+            </ul>
         </section>
-
-
 
         <!-- FORMULAIRE -->
         <section class="ticket-form">
             <h2>Réserver mes billets</h2>
-
             <form id="ticketForm">
-                <input type="hidden" id="selectedMatch" name="match" required>
+                <fieldset>
+                    <legend>Match sélectionné</legend>
+                    <p id="matchSummary">Aucun match sélectionné.</p>
+                    <input type="hidden" id="selectedMatch" name="match">
+                </fieldset>
 
-                <div class="summary" id="matchSummary">
-                    <strong>Match sélectionné :</strong> aucun pour le moment.
-                </div>
+                <fieldset>
+                    <legend>Informations billets</legend>
 
-                <div class="field">
                     <label for="category">Catégorie</label>
                     <select id="category" name="category" required>
                         <option value="">Choisir une catégorie</option>
@@ -159,136 +130,166 @@
                         <option value="Centrale">Centrale</option>
                         <option value="VIP">VIP</option>
                     </select>
-                </div>
+                    <label for="ticketType">Type de billet</label>
+                    <select id="ticketType" name="ticketType" required>
+                        <option value="">Choisir un type</option>
+                        <option value="journalier">Ticket journalier</option>
+                        <option value="pass">Pass événement</option>
+                        <option value="reduit">Tarif réduit</option>
+                    </select>
+                    <label for="quantity">Nombre</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
 
-                <div class="field-inline">
-                    <div class="field">
-                        <label for="quantity">Nombre</label>
-                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
-                    </div>
+                    <label>Prix unitaire (€)</label>
+                    <input type="text" id="price" readonly>
 
-                    <div class="field">
-                        <label for="price">Prix unitaire (€)</label>
-                        <input type="text" id="price" readonly>
-                    </div>
-                </div>
-
-                <div class="field">
                     <label>Total (€)</label>
                     <input type="text" id="total" readonly>
-                </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Vos informations</legend>
 
-                <div class="field-inline">
-                    <div class="field">
-                        <label for="firstname">Prénom</label>
-                        <input type="text" id="firstname" name="firstname" required>
-                    </div>
+                    <label for="firstname">Prénom</label>
+                    <input type="text" id="firstname" name="firstname" required>
 
-                    <div class="field">
-                        <label for="lastname">Nom</label>
-                        <input type="text" id="lastname" name="lastname" required>
-                    </div>
-                </div>
+                    <label for="lastname">Nom</label>
+                    <input type="text" id="lastname" name="lastname" required>
 
-                <div class="field">
-                    <label for="email">E-mail</label>
+                    <label for="email">E‑mail</label>
                     <input type="email" id="email" name="email" required>
-                </div>
+                </fieldset>
 
-                <div class="field">
-                    <label for="payment">Paiement</label>
+                <fieldset>
+                    <legend>Paiement</legend>
+
+                    <label for="payment">Mode de paiement</label>
                     <select id="payment" name="payment" required>
                         <option value="">Choisir un mode</option>
                         <option value="carte">Carte bancaire</option>
                         <option value="paypal">PayPal</option>
                     </select>
-                </div>
+                </fieldset>
 
                 <button type="submit">Confirmer ma réservation</button>
             </form>
-        </section>
 
+        </section>
     </main>
 
+    <!-- FOOTER -->
+    <footer id="footer-wrapper">
+        <div id="footer" class="container">
 
-    <!-- FOOTER corrigé -->
-    <footer>
-        <div id="footer-wrapper">
-            <div id="footer" class="container">
+            <section class="newsletter">
+                <h3>Newsletter</h3>
+                <p class="intro">Restez informé.</p>
 
-                <ul class="icons social-inline">
-                    <li><a href="#" class="icon brands fa-twitter"></a></li>
-                    <li><a href="#" class="icon brands fa-facebook-f"></a></li>
-                    <li><a href="#" class="icon brands fa-dribbble"></a></li>
-                    <li><a href="#" class="icon brands fa-instagram"></a></li>
-                    <li><a href="#" class="icon brands fa-youtube"></a></li>
-                    <li><a href="#" class="icon brands fa-pinterest"></a></li>
-                </ul>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email" required aria-label="Adresse e-mail">
+                    <input type="text" placeholder="Prénom" required aria-label="Prénom">
+                    <button type="submit">S'inscrire →</button>
+                </form>
 
-            </div>
+                <p class="mention">Aucun spam. Désabonnement possible à tout moment.</p>
+            </section>
 
-            <div id="copyright"
-                class="container">
-                <ul class="menu">
-                    <li>© Untitled. All rights reserved.</li>
-                    <li>Design : <a href="http://html5up.net">HTML5 UP</a></li>
-                </ul>
-                <img src="images/ballon.png" alt="" width="120" height="100"
-                    style="display:block;margin:auto;">
-            </div>
+            <ul class="icons social-inline">
+                <li><a href="#" class="icon brands fa-twitter"></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"></a></li>
+                <li><a href="#" class="icon brands fa-instagram"></a></li>
+                <li><a href="#" class="icon brands fa-youtube"></a></li>
+            </ul>
 
         </div>
-    </footer>
 
+        <div id="copyright">
+            <ul class="menu">
+                <li>© Neo League</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+
+            <a href="index.html">
+                <img src="images/ballon.png" alt="logo neo league" width="108" height="100">
+            </a>
+        </div>
+    </footer>
 
     <!-- SCRIPT -->
     <script>
         const matchCards = document.querySelectorAll(".match-card");
         const matchSummary = document.getElementById("matchSummary");
+        const hiddenMatch = document.getElementById("selectedMatch");
+
         const priceInput = document.getElementById("price");
         const quantityInput = document.getElementById("quantity");
         const totalInput = document.getElementById("total");
-        const hiddenMatch = document.getElementById("selectedMatch");
         const form = document.getElementById("ticketForm");
+
+        const coefCategorie = {
+            "Virage": 1,
+            "Latérale": 1.1,
+            "Centrale": 1.3,
+            "VIP": 1.8
+        };
+        const coefTypeBillet = {
+            "journalier": 1,
+            "pass": 0.8,
+            "reduit": 0.6
+        };
+
+        // Arrondi à 0.50€ près
+        function arrondi50(x) {
+            return Math.round(x * 2) / 2;
+        }
 
         let currentPrice = 0;
 
+        //   Mise a jour du prix
         function updateTotal() {
-            const qty = Math.max(1, parseInt(quantityInput.value || 1));
-            quantityInput.value = qty;
-            totalInput.value = (qty * currentPrice).toFixed(2);
+            const category = document.getElementById("category").value;
+            const ticketType = document.getElementById("ticketType").value;
+
+            const coefCat = coefCategorie[category] || 1;
+            const coefType = coefTypeBillet[ticketType] || 1;
+
+            // Prix unitaire final (arrondi)
+            const prixUnitaire = arrondi50(currentPrice * coefCat * coefType);
+            priceInput.value = prixUnitaire ? prixUnitaire.toFixed(2) + " €" : "";
+
+            // Total final
+            const total = arrondi50(prixUnitaire * (quantityInput.value || 1));
+            totalInput.value = total ? total.toFixed(2) : "";
         }
 
+        // ==============================
+        //   Selection d'un match
         function selectMatch(card) {
-            const matchName = card.dataset.match;
-
-            hiddenMatch.value = matchName;
+            hiddenMatch.value = card.dataset.match;
             currentPrice = parseFloat(card.dataset.price);
 
-            priceInput.value = currentPrice.toFixed(2);
             updateTotal();
 
-            matchSummary.innerHTML = `
-                <strong>Match :</strong> ${card.dataset.match}<br>
-                <strong>Date :</strong> ${card.dataset.date}<br>
-                <strong>Stade :</strong> ${card.dataset.stadium}
-            `;
+            matchSummary.textContent =
+                `Match : ${card.dataset.match} — ${card.dataset.date} — ${card.dataset.stadium}`;
 
             matchCards.forEach(c => c.classList.remove("selected"));
             card.classList.add("selected");
         }
 
+        // Click + Enter/Space support
         matchCards.forEach(card => {
             card.addEventListener("click", () => selectMatch(card));
             card.addEventListener("keydown", e => {
-                if (e.key === "Enter" || e.key === " ") {
-                    selectMatch(card);
-                }
+                if (e.key === "Enter" || e.key === " ") selectMatch(card);
             });
         });
 
+        // Recalcul dynamique
+        document.getElementById("category").addEventListener("change", updateTotal);
+        document.getElementById("ticketType").addEventListener("change", updateTotal);
         quantityInput.addEventListener("input", updateTotal);
 
+        //   Soumission formulaire
         form.addEventListener("submit", e => {
             e.preventDefault();
 
@@ -297,15 +298,25 @@
                 return;
             }
 
+            const category = document.getElementById("category").value;
+            const ticketType = document.getElementById("ticketType").value;
+            const qty = quantityInput.value;
+            const total = totalInput.value;
+
             const alertBox = document.getElementById("reservationAlert");
             alertBox.innerHTML = `
-                <strong>✅ Réservation effectuée !</strong>
-                Match : ${hiddenMatch.value} • Total : ${totalInput.value} €
-            `;
-            alertBox.classList.add("show");
+        <p class="alert-title">✅ Réservation effectuée !</p>
+        <p class="alert-line">Match : ${hiddenMatch.value}</p>
+        <p class="alert-line">Catégorie : ${category}</p>
+        <p class="alert-line">Type de billet : ${ticketType}</p>
+        <p class="alert-line">Quantité : ${qty}</p>
+        <p class="alert-line">Total : ${total} €</p>
+        <p class="alert-footer">Hâte de vous voir au match !</p>`;
 
+            alertBox.classList.add("show");
             setTimeout(() => alertBox.classList.remove("show"), 4500);
 
+            // Reset complet
             form.reset();
             hiddenMatch.value = "";
             priceInput.value = "";
@@ -315,6 +326,7 @@
             matchCards.forEach(c => c.classList.remove("selected"));
         });
     </script>
+
 
 </body>
 
