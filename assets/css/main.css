@@ -2226,7 +2226,7 @@ ul.icons.social-inline {
 				}
 
 				#nav > ul > li > span, #nav > ul > li > a {
-					color: #fff;
+                    color: #000000;
                     text-decoration: none;
                     outline: 0;
                     border: 0;
@@ -2238,9 +2238,10 @@ ul.icons.social-inline {
                     -o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
                     -ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
                     transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-                    background-color: rgba(255, 255, 255, 0.15);
+                     background-color: rgba(255, 255, 255, 0.295);
                     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(20, 154, 235, 0.7);
-				}
+                    font-weight: 500;
+                }
 
 				 #nav > ul > li.active > span, #nav > ul > li.active > a, #nav > ul > li > span, #nav > ul > li > a:hover {
                     background-color: rgba(0, 0, 0, 0.678);
@@ -3311,4 +3312,16 @@ ul.icons.social-inline {
 
 #search-bar button:hover {
   background: #005fcc;
+}
+@media screen and (max-width: 1080px) {
+  #search-bar {
+    position: relative;
+    top: auto;
+    right: auto;
+    justify-content: center;
+    margin: 0.5em auto 0;
+  }
+  #search-bar input {
+    width: 200px;
+  }
 }
