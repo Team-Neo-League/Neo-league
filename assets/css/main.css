@@ -2135,7 +2135,7 @@ ul.icons.social-inline {
 			background: #f6f8fb url("images/image-wrapper.svg");
 		}
 
-	#header-wrapper {
+	#header {
     position: relative;
     padding: 4em 0 2em 0;
     background-image: url("images/terrain.png");
@@ -2145,7 +2145,7 @@ ul.icons.social-inline {
     background-color: transparent;
 }
 
-	.homepage #header-wrapper {
+	.homepage #header {
 		padding: 10em 0 6em 0;
 		background-size: cover;
 	}
@@ -2160,7 +2160,7 @@ ul.icons.social-inline {
 		padding: 6em 0 6em 0;
 	}
 
-	#footer-wrapper {
+	#footer {
     position: relative;
     border-top: solid 1px #e6e6e6;
     padding: 1em 0 ;
@@ -2458,11 +2458,11 @@ ul.icons.social-inline {
 				padding: 5em 0 5em 0;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 2em 0 2em 0;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 8em 0 4em 0;
 			}
 
@@ -2470,7 +2470,7 @@ ul.icons.social-inline {
 				padding: 5em 0 5em 0;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 5em 0 5em 0;
 			}
 
@@ -2503,11 +2503,11 @@ ul.icons.social-inline {
 				padding: 4em 2em 4em 2em;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 5em 0 1em 0;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 5em 0 4em 0;
 			}
 
@@ -2515,7 +2515,7 @@ ul.icons.social-inline {
 				padding: 2em;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 4em 2em 4em 2em;
 			}
 
@@ -2738,12 +2738,12 @@ ul.icons.social-inline {
 				padding: 3em 20px 3em 20px;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 3em 20px 20px 20px;
 				text-align: center;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 3em 20px 3em 20px;
 			}
 
@@ -2751,7 +2751,7 @@ ul.icons.social-inline {
 				padding: 20px;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 3em 20px 3em 20px;
 			}
 
