@@ -133,7 +133,7 @@
                     <label for="ticketType">Type de billet</label>
                     <select id="ticketType" name="ticketType" required>
                         <option value="">Choisir un type</option>
-                        <option value="Standart">Ticket standart</option>
+                        <option value="Standard">Ticket standard</option>
                         <option value="Supporter">Pass supporter</option>
                         <option value="Enfant">Tarif enfant</option>
                     </select>
@@ -184,7 +184,7 @@
                 <h3>Newsletter</h3>
                 <p class="intro">Restez informé.</p>
 
-                <form class="newsletter-form">
+                <form id="newsletterForm" class="newsletter-form">
                     <input type="email" placeholder="Votre email" required aria-label="Adresse e-mail">
                     <input type="text" placeholder="Prénom" required aria-label="Prénom">
                     <button type="submit">S'inscrire →</button>
@@ -232,7 +232,7 @@
             "VIP": 1.8
         };
         const coefTypeBillet = {
-            "Standart": 1,
+            "Standard": 1,
             "Supporter": 0.8,
             "Enfant": 0.6
         };
@@ -252,12 +252,12 @@
             const coefCat = coefCategorie[category] || 1;
             const coefType = coefTypeBillet[ticketType] || 1;
 
-            // Prix unitaire final (arrondi)
+            // Prix unitaire arrondi à 0.50€ près
             const prixUnitaire = arrondi50(currentPrice * coefCat * coefType);
             priceInput.value = prixUnitaire ? prixUnitaire.toFixed(2) + " €" : "";
 
-            // Total final
-            const total = arrondi50(prixUnitaire * (quantityInput.value || 1));
+            // Total final (sans second arrondi)
+            const total = prixUnitaire * (quantityInput.value || 1);
             totalInput.value = total ? total.toFixed(2) : "";
         }
 
@@ -280,7 +280,10 @@
         matchCards.forEach(card => {
             card.addEventListener("click", () => selectMatch(card));
             card.addEventListener("keydown", e => {
-                if (e.key === "Enter" || e.key === " ") selectMatch(card);
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    selectMatch(card);
+                }
             });
         });
 
@@ -324,6 +327,20 @@
             quantityInput.value = 1;
             matchSummary.textContent = "Aucun match sélectionné.";
             matchCards.forEach(c => c.classList.remove("selected"));
+        });
+        // Soumission newsletter
+        document.getElementById("newsletterForm").addEventListener("submit", e => {
+            e.preventDefault();
+
+            const alertBox = document.getElementById("reservationAlert");
+            alertBox.innerHTML = `
+        <p class="alert-title">✅ Inscription confirmée !</p>
+        <p class="alert-line">Merci, vous êtes bien inscrit à la newsletter Neo League.</p>`;
+
+            alertBox.classList.add("show");
+            setTimeout(() => alertBox.classList.remove("show"), 4500);
+
+            e.target.reset();
         });
     </script>
 
