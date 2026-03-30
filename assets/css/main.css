@@ -1905,9 +1905,22 @@ ul.icons.social-inline {
         }
    
         ul.icons.social-inline li a {
-            display: none;
-        }
-
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2.5em;
+			height: 2.5em;
+			background-color: gray;
+			border-radius: 6px;
+			color: #fff;
+		}
+		ul.icons.social-inline li a:hover {
+			background-color: #76c3ef;
+			color: #001a3a;
+		}
+		ul.icons.social-inline li a .extra {
+			display: none;
+		}
 /* Menu */
 
 	ul.menu {
@@ -2123,7 +2136,7 @@ ul.icons.social-inline {
 			background: #f6f8fb url("images/image-wrapper.svg");
 		}
 
-	#header-wrapper {
+	#header {
     position: relative;
     padding: 4em 0 2em 0;
     background-image: url("images/terrain.png");
@@ -2148,7 +2161,7 @@ ul.icons.social-inline {
 		padding: 6em 0 6em 0;
 	}
 
-	#footer-wrapper {
+	#footer {
     position: relative;
     border-top: solid 1px #e6e6e6;
     padding: 1em 0 ;
@@ -2458,7 +2471,7 @@ ul.icons.social-inline {
 				padding: 5em 0 5em 0;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 5em 0 5em 0;
 			}
 
@@ -2491,11 +2504,11 @@ ul.icons.social-inline {
 				padding: 4em 2em 4em 2em;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 5em 0 1em 0;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 5em 0 4em 0;
 			}
 
@@ -2503,7 +2516,7 @@ ul.icons.social-inline {
 				padding: 2em;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 4em 2em 4em 2em;
 			}
 
@@ -2726,12 +2739,12 @@ ul.icons.social-inline {
 				padding: 3em 20px 3em 20px;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 3em 20px 20px 20px;
 				text-align: center;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 3em 20px 3em 20px;
 			}
 
@@ -2739,7 +2752,7 @@ ul.icons.social-inline {
 				padding: 20px;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 3em 20px 3em 20px;
 			}
 
@@ -3422,7 +3435,7 @@ section.features {
 }
 
 .palmares-bloc h3 {
-    border-left: 4px solid #c9a84c; / doré, à adapter à ta charte */
+    border-left: 4px solid #c9a84c;
     padding-left: 10px;
     margin-bottom: 1em;
     text-transform: uppercase;
@@ -3439,4 +3452,87 @@ section.features {
 
 .trophy-special .trophy-count {
     font-size: 1.8em;
+}
+
+.newsletter {
+    background: none;
+    text-align: left;
+    color: #ffffff;	
+}
+.newsletter h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+	color: white;
+}
+.newsletter .intro {
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+}
+.newsletter-form button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+	background-color: #0066ff;
+	font-size: inherit;
+}
+.newsletter-form button[type="submit"]:hover {
+    background-color: grey;
+	color: white;
+}
+.mention {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+/*BARRE DE RECHERCHE*/
+
+#search-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+
+#search-bar input {
+  height: 45px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  background: #fff;
+}
+
+#search-bar button {
+  height: 45px;
+  padding: 0 14px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+#search-bar button:hover {
+  background: #005fcc;
+}
+@media screen and (max-width: 1080px) {
+  #search-bar {
+    position: relative;
+    top: auto;
+    right: auto;
+    justify-content: center;
+    margin: 0.5em auto 0;
+  }
+  #search-bar input {
+    width: 200px;
+  }
 }
