@@ -3730,22 +3730,17 @@ ul.icons.social-inline {
    ========================================================================== */
 
 .newsletter {
-    background: none;
-    text-align: left;
-    color: #ffffff;	
+  color: var(--text-light);
 }
+
 .newsletter h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-	color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
-.newsletter .intro {
-    margin-bottom: 20px;
-    opacity: 0.85;
-}
+
 .newsletter-form {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 .newsletter-form input {
     flex: 1;
