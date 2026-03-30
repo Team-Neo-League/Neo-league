@@ -1905,9 +1905,22 @@ ul.icons.social-inline {
         }
    
         ul.icons.social-inline li a {
-            display: none;
-        }
-
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2.5em;
+			height: 2.5em;
+			background-color: gray;
+			border-radius: 6px;
+			color: #fff;
+		}
+		ul.icons.social-inline li a:hover {
+			background-color: #76c3ef;
+			color: #001a3a;
+		}
+		ul.icons.social-inline li a .extra {
+			display: none;
+		}
 /* Menu */
 
 	ul.menu {
@@ -2123,7 +2136,7 @@ ul.icons.social-inline {
 			background: #f6f8fb url("images/image-wrapper.svg");
 		}
 
-	#header-wrapper {
+	#header {
     position: relative;
     padding: 4em 0 2em 0;
     background-image: url("images/terrain.png");
@@ -2133,7 +2146,7 @@ ul.icons.social-inline {
     background-color: transparent;
 }
 
-	.homepage #header-wrapper {
+	.homepage #header {
 		padding: 10em 0 6em 0;
 		background-size: cover;
 	}
@@ -2148,7 +2161,7 @@ ul.icons.social-inline {
 		padding: 6em 0 6em 0;
 	}
 
-	#footer-wrapper {
+	#footer {
     position: relative;
     border-top: solid 1px #e6e6e6;
     padding: 1em 0 ;
@@ -2211,19 +2224,22 @@ ul.icons.social-inline {
 				}
 
 				#nav > ul > li > span, #nav > ul > li > a {
-					color: #fff;
-					text-decoration: none;
-					outline: 0;
-					border: 0;
-					border: solid 1px rgba(255, 255, 255, 0);
-					border-radius: 0.35em;
-					padding: 0.3em 1em 0.3em 1em;
-					-moz-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					-webkit-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					-o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					-ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-				}
+                    color: #000000;
+                    text-decoration: none;
+                    outline: 0;
+                    border: 0;
+                    border: solid 1px rgba(255, 255, 255, 0);
+                    border-radius: 0.35em;
+                    padding: 0.3em 1em 0.3em 1em;
+                    -moz-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    -webkit-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    -o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    -ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                     background-color: rgba(255, 255, 255, 0.295);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(20, 154, 235, 0.7);
+                    font-weight: 500;
+                }
 
 				#nav > ul > li.active > span, #nav > ul > li.active > a {
 					border-color: rgba(255, 255, 255, 0.75);
@@ -2446,11 +2462,11 @@ ul.icons.social-inline {
 				padding: 5em 0 5em 0;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 2em 0 2em 0;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 8em 0 4em 0;
 			}
 
@@ -2458,7 +2474,7 @@ ul.icons.social-inline {
 				padding: 5em 0 5em 0;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 5em 0 5em 0;
 			}
 
@@ -2491,11 +2507,11 @@ ul.icons.social-inline {
 				padding: 4em 2em 4em 2em;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 5em 0 1em 0;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 5em 0 4em 0;
 			}
 
@@ -2503,7 +2519,7 @@ ul.icons.social-inline {
 				padding: 2em;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 4em 2em 4em 2em;
 			}
 
@@ -2726,12 +2742,12 @@ ul.icons.social-inline {
 				padding: 3em 20px 3em 20px;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 3em 20px 20px 20px;
 				text-align: center;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 3em 20px 3em 20px;
 			}
 
@@ -2739,7 +2755,7 @@ ul.icons.social-inline {
 				padding: 20px;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 3em 20px 3em 20px;
 			}
 
@@ -3176,7 +3192,18 @@ ul.icons.social-inline {
 #search-bar button:hover {
   background: #005fcc;
 }
-
+@media screen and (max-width: 1080px) {
+  #search-bar {
+    position: relative;
+    top: auto;
+    right: auto;
+    justify-content: center;
+    margin: 0.5em auto 0;
+  }
+  #search-bar input {
+    width: 200px;
+  }
+}
 /* TEMOIGNAGES */
 .carousel-container {
   position: relative;
@@ -3444,6 +3471,10 @@ ul.icons.social-inline {
     margin: 50px;
 }
 
+section {
+    padding: 20px 40px;
+} 
+
 
 /* Fil d'Ariane */
 .breadcrumb {
@@ -3483,4 +3514,106 @@ ul.icons.social-inline {
 
 .breadcrumb [aria-current="page"] {
     color: #52575c;
+}
+
+
+/* Palmarès */
+#palmares {
+    margin: 50px;
+}
+
+.trophy-grid {
+    display: flex !important;
+    gap: 20px;
+    padding: 20px 0 !important;
+    flex-wrap: wrap;
+}
+
+.trophy-grid li {
+    list-style: none;
+}
+
+.trophy-card {
+    width: 200px;
+    padding: 24px 16px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1a3a5c 0%, #0d2240 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+}
+
+.trophy-count {
+    font-size: 2.8em;
+    font-weight: 600;
+    line-height: 1;
+    display: block;
+}
+
+.trophy-name {
+    display: block;
+    opacity: 0.85;
+    line-height: 1.3;
+}
+.palmares-bloc {
+    margin-bottom: 2.5em;
+}
+
+.palmares-bloc h3 {
+    border-left: 4px solid #c9a84c; / doré, à adapter à ta charte */
+    padding-left: 10px;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.trophy-years {
+    display: block;
+    font-size: 0.75em;
+    color: #aaa;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.trophy-special .trophy-count {
+    font-size: 1.8em;
+}
+.newsletter {
+    background: none;
+    text-align: left;
+    color: #ffffff;	
+}
+.newsletter h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+	color: white;
+}
+.newsletter .intro {
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+}
+.newsletter-form button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+	background-color: #0066ff;
+	font-size: inherit;
+}
+.newsletter-form button[type="submit"]:hover {
+    background-color: grey;
+	color: white;
+}
+.mention {
+    font-size: 0.85rem;
+    opacity: 0.8;
 }
