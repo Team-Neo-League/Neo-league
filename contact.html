@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+
+    <title>Contact - Néo-League</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" href="images/ballon.png" type="image/png">
+
+</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header">
+                <div class="container">
+                    <p id="logo"><a href="index.html">Accueil</a></p>
+                    <nav id="nav">
+                        <ul>
+                            <li>
+                                <a href="equipe.html">Equipes</a>
+                                <ul>
+                                    <li>
+                                        <a href="realMadrid.html">Real Madrid</a>
+                                        <ul>
+                                            <li><a href="realMadrid.html#composition">Composition</a></li>
+                                            <li><a href="realMadrid.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="barcelone.html">Barcelone</a>
+                                        <ul>
+                                            <li><a href="barcelone.html#composition">Composition</a></li>
+                                            <li><a href="barcelone.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="chelsea.html">Chelsea</a>
+                                        <ul>
+                                            <li><a href="chelsea.html#composition">Composition</a></li>
+                                            <li><a href="chelsea.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="psg.html">Paris SG</a>
+                                        <ul>
+                                            <li><a href="psg.html#composition">Composition</a></li>
+                                            <li><a href="psg.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="manchesterCity.html">Manchester City</a>
+                                        <ul>
+                                            <li><a href="manchesterCity.html#composition">Composition</a></li>
+                                            <li><a href="manchesterCity.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="bayern.html">Bayern Munich</a>
+                                        <ul>
+                                            <li><a href="bayern.html#composition">Composition</a></li>
+                                            <li><a href="bayern.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="liverpool.html">Liverpool FC</a>
+                                        <ul>
+                                            <li><a href="liverpool.html#composition">Composition</a></li>
+                                            <li><a href="liverpool.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="juventus.html">Juventus</a>
+                                        <ul>
+                                            <li><a href="juventus.html#composition">Composition</a></li>
+                                            <li><a href="juventus.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="acMilan.html">AC Milan</a>
+                                        <ul>
+                                            <li><a href="acMilan.html#composition">Composition</a></li>
+                                            <li><a href="acMilan.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="interMilan.html">Inter Milan</a>
+                                        <ul>
+                                            <li><a href="interMilan.html#composition">Composition</a></li>
+                                            <li><a href="interMilan.html#palmares">Palmarès</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="classement.html">Classement</a></li>
+                            <li class="break"><a href="billeterie.html">Billeterie</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <form id="search-bar" action="#" method="get">
+						<input type="text" name="q" placeholder="Rechercher...">
+						<button type="submit">🔍</button>
+					</form>
+                </div>
+            </header>
+			<!-- Contact Page -->
+			<main class="wrapper">
+				<nav aria-label="Fil d'Ariane" class="breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li aria-current="page">Contact</li>
+                    </ol>
+                </nav>
+				<div class="container">
+					<header class="major">
+						<h2>Contact</h2>
+						<p>N’hésitez pas à nous contacter pour toute question ou collaboration concernant Neo-League.</p>
+					</header>
+
+					<section id="contact-form">
+						<h3>Formulaire de contact</h3>
+						<form id="contactForm" action="#" method="post" novalidate>
+							<div class="row gtr-50">
+							  <div class="col-6 col-12-mobile">
+								<label for="name">Nom</label>
+								<input type="text" id="name" name="name" placeholder="Nom" required autocomplete="name" />
+							  </div>
+							  <div class="col-6 col-12-mobile">
+								<label for="email">Email</label>
+								<input 
+									type="email" 
+									id="email" 
+									name="email" 
+									placeholder="Email" 
+									required 
+									autocomplete="email"
+									pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+									title="Veuillez entrer une adresse email valide (ex: nom@domaine.com)"
+								/>
+							  </div>
+							  <div class="col-12">
+								<label for="subject">Sujet</label>
+								<input type="text" id="subject" name="subject" placeholder="Sujet" required />
+							  </div>
+							  <div class="col-12">
+								<label for="message">Message</label>
+								<textarea id="message" name="message" placeholder="Votre message..." rows="6" required></textarea>
+							  </div>
+							  <div class="col-12">
+								<ul class="actions">
+								  <li>
+									<button type="submit">Envoyer</button>
+								  </li>
+								</ul>
+							  </div>
+							</div>
+						  </form>
+						<p id="successMessage">Merci, nous vous recontacterons dès que possible !</p>
+					</section>
+
+					<section id="contact-info">
+						<h3>Informations</h3>
+						<p>Email : <a href="mailto:contact@neo-league.com">contact@neo-league.com</a></p>
+						<p>Adresse : <a href="https://maps.google.com/?q=Av.+de+l'Astronomie+19,+1210+Saint-Josse-ten-Noode" target="_blank">Av. de l'Astronomie 19, 1210 Saint-Josse-ten-Noode</a></p>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.901494628762!2d4.366918776954329!3d50.85150835840544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4ce9cfb50cf%3A0xecd042e116ed41ac!2sEPFC%20-%20Enseignement%20de%20Promotion%20et%20de%20Formation%20Continue%20de%20l&#39;ULB%20et%20de%20Beci!5e0!3m2!1sfr!2sbe!4v1774616909382!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</section>
+				</div>
+			</main>
+
+	    	<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div>
+						<div class="newsletter">
+							<h3>Newsletter</h3>
+							<p class="intro">Restez informés.</p>
+							<form class="newsletter-form" method="post" action="#">
+							  <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+							  <input type="text" name="prenom" placeholder="Prénom" required>
+							  <input type="submit" value="S'inscrire →">
+							</form>
+							<p class="mention">Aucun spam. Désabonnement possible à tout moment.</p>
+						</div>
+
+						<ul class="icons social-inline">
+							<li><a href="https://x.com/i/flow/login" target="_blank" class="icon brands fa-twitter"><span class="extra">twitter.com/</span></a></li>
+							<li><a href="https://www.facebook.com/login" target="_blank" class="icon brands fa-facebook-f"><span class="extra">facebook.com/</span></a></li>
+							<li><a href="https://www.instagram.com/accounts/login" target="_blank" class="icon brands fa-instagram"><span class="extra">instagram.com/</span></a></li>
+							<li><a href="https://www.youtube.com/" target="_blank" class="icon brands fa-youtube"><span class="extra">youtube.com/</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="copyright" class="container">
+					<ul class="menu">
+						<li>&copy; Neo league</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+					<a href="index.html">
+						<img src="images/ballon.png" alt="logo neo league" width="108" height="100" style="display: block; margin: auto;">
+					</a>
+				</div>
+			</footer>
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				document.getElementById('contactForm').addEventListener('submit', function(e) {
+				  e.preventDefault();
+				
+				  const name = document.getElementById('name').value.trim();
+				  const email = document.getElementById('email').value.trim();
+				  const subject = document.getElementById('subject').value.trim();
+				  const message = document.getElementById('message').value.trim();
+				
+				  if (!name || !email || !subject || !message) {
+					alert('Veuillez remplir tous les champs.');
+					return;
+				  }
+				
+				  // Vérification du @ dans l'email
+				  const emailInput = document.getElementById('email');
+
+					if (!emailInput.checkValidity()) {
+					alert("Veuillez entrer une adresse email valide (ex: nom@domaine.com)");
+					return;
+					}
+				
+				  document.getElementById('successMessage').style.display = 'block';
+				  this.reset();
+				});
+			</script>
+		</div>
+	</body>
+</html>
