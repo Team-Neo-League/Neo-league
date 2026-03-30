@@ -3476,4 +3476,45 @@ ul.icons.social-inline {
 
 section {
     padding: 20px 40px;
+} 
+
+
+/* Fil d'Ariane */
+.breadcrumb {
+    margin: 0 auto;
+    padding: 0.5em 0 0 75px;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb a {
+    color: #76c3ef;
+    border: none;
+}
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "›";
+    margin-left: 0.5em;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+    color: #52575c;
 }
