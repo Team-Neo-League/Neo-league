@@ -2123,7 +2123,7 @@ ul.icons.social-inline {
 			background: #f6f8fb url("images/image-wrapper.svg");
 		}
 
-	#header-wrapper {
+	#header {
     position: relative;
     padding: 4em 0 2em 0;
     background-image: url("images/terrain.png");
@@ -2133,7 +2133,7 @@ ul.icons.social-inline {
     background-color: transparent;
 }
 
-	.homepage #header-wrapper {
+	.homepage #header {
 		padding: 10em 0 6em 0;
 		background-size: cover;
 	}
@@ -2148,7 +2148,7 @@ ul.icons.social-inline {
 		padding: 6em 0 6em 0;
 	}
 
-	#footer-wrapper {
+	#footer {
     position: relative;
     border-top: solid 1px #e6e6e6;
     padding: 1em 0 ;
@@ -2210,7 +2210,7 @@ ul.icons.social-inline {
 					display: none;
 				}
 
-				#nav > ul > li > span, #nav > ul > li > a {
+                #nav > ul > li > span, #nav > ul > li > a {
 					color: #fff;
 					text-decoration: none;
 					outline: 0;
@@ -2223,13 +2223,15 @@ ul.icons.social-inline {
 					-o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 					-ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 					transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+				 	background-color: rgba(255, 255, 255, 0.15);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(20, 154, 235, 0.7);
+					font-weight: 500;
 				}
 
-				#nav > ul > li.active > span, #nav > ul > li.active > a {
-					border-color: rgba(255, 255, 255, 0.75);
-					background-color: rgba(255, 255, 255, 0.15);
-					color: #fff;
-				}
+				 #nav > ul > li.active > span, #nav > ul > li.active > a, #nav > ul > li > span, #nav > ul > li > a:hover {
+                    background-color: rgba(0, 0, 0, 0.678);
+                    color: #fff;
+                }
 
 				#nav > ul > li:first-child {
 					margin-left: 0;
@@ -2446,11 +2448,11 @@ ul.icons.social-inline {
 				padding: 5em 0 5em 0;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 2em 0 2em 0;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 8em 0 4em 0;
 			}
 
@@ -2458,7 +2460,7 @@ ul.icons.social-inline {
 				padding: 5em 0 5em 0;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 5em 0 5em 0;
 			}
 
@@ -2491,11 +2493,11 @@ ul.icons.social-inline {
 				padding: 4em 2em 4em 2em;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 5em 0 1em 0;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 5em 0 4em 0;
 			}
 
@@ -2503,7 +2505,7 @@ ul.icons.social-inline {
 				padding: 2em;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 4em 2em 4em 2em;
 			}
 
@@ -2726,12 +2728,12 @@ ul.icons.social-inline {
 				padding: 3em 20px 3em 20px;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 3em 20px 20px 20px;
 				text-align: center;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 3em 20px 3em 20px;
 			}
 
@@ -2739,7 +2741,7 @@ ul.icons.social-inline {
 				padding: 20px;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 3em 20px 3em 20px;
 			}
 
@@ -3235,6 +3237,9 @@ ul.icons.social-inline {
 
 /* CSS spécifique billeterie */
 /* HERO Billetterie */
+.billeterie{
+	margin: 50px;
+}
 #hero-billeterie {
     background: url("images/stade.jpg") center/cover no-repeat;
     height: 400px;
@@ -3726,45 +3731,38 @@ ul.icons.social-inline {
 .newsletter {
     background: none;
     text-align: left;
-    color: #ffffff;
+    color: #ffffff;	
 }
-
 .newsletter h3 {
     font-size: 1.8rem;
     font-weight: 600;
+	color: white;
 }
-
 .newsletter .intro {
     margin-bottom: 20px;
     opacity: 0.85;
 }
-
 .newsletter-form {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
 }
-
 .newsletter-form input {
     flex: 1;
     padding: 12px;
     border-radius: 6px;
 }
-
 .newsletter-form button {
     flex: 1;
     padding: 12px;
     border-radius: 6px;
     border: none;
-    background-color: #0066ff;
-    font-size: inherit;
-    color: white;
+	background-color: #0066ff;
+	font-size: inherit;
 }
-
-.newsletter-form button:hover {
+.newsletter-form button[type="submit"]:hover {
     background-color: grey;
+	color: white;
 }
-
 .mention {
     font-size: 0.85rem;
     opacity: 0.8;
