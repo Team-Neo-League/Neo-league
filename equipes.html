@@ -8,7 +8,6 @@
     <link rel="icon" href="images/ballon.png" type="image/png">
 </head>
 
-<!-- Classe ajoutée pour identifier la page -->
 <body class="page-equipe left-sidebar is-preload">
 
 <div id="page-wrapper">
@@ -35,20 +34,32 @@
     <main class="wrapper">
         <div class="container" id="main">
 
+             <!-- BREADCRUMB -->
+            <nav aria-label="Fil d'Ariane" class="breadcrumb">
+                <ol>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="equipe.html">Équipes</a></li>
+                    <li aria-current="page">Chelsea</li>
+                </ol>
+            </nav>
+
             <!-- Titre de la page -->
             <header class="page-header">
-                <h1>Les équipes</h1>
+                <h1 hidden>Neo League</h1>
+                <h2 style="margin-bottom: 20px;">Liste des équipes</h2>
             </header>
 
+           
             <!-- Section équipes -->
             <section class="row features">
-
+                <h2 hidden>Liste des équipes</h2>
+            
                 <!-- Real Madrid -->
                 <article class="col-4 col-12-narrower feature team-card">
                     <div class="image-wrapper">
                         <img src="images/logo_foot/Logo_Real_Madrid.svg.png" alt="Real Madrid" class="team-logo">
                     </div>
-                    <h3>Real Madrid</h3>
+                    <h2>Real Madrid</h2>
                     <p>Club espagnol mythique, multiple vainqueur de la Ligue des Champions.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
@@ -58,7 +69,7 @@
                     <div class="image-wrapper">
                         <img src="images/logo_foot/barcelone.png" alt="Barcelone" class="team-logo">
                     </div>
-                    <h3>Barcelone</h3>
+                    <h2>Barcelone</h2>
                     <p>Club légendaire connu pour son style de jeu basé sur la possession.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
@@ -68,7 +79,7 @@
                     <div class="image-wrapper">
                         <img src="images/logo_foot/manchester_city.png" alt="Manchester City" class="team-logo">
                     </div>
-                    <h3>Manchester City</h3>
+                    <h2>Manchester City</h2>
                     <p>Équipe dominante en Angleterre avec un jeu offensif spectaculaire.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
@@ -78,7 +89,7 @@
                     <div class="image-wrapper">
                         <img src="images/logo_foot/liverpool.png" alt="Liverpool" class="team-logo">
                     </div>
-                    <h3>Liverpool FC</h3>
+                    <h2>Liverpool FC</h2>
                     <p>Club historique avec une ambiance unique à Anfield.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
@@ -88,7 +99,7 @@
                     <div class="image-wrapper">
                         <img src="images/logo_foot/bayern.png" alt="Bayern Munich" class="team-logo">
                     </div>
-                    <h3>Bayern Munich</h3>
+                    <h2>Bayern Munich</h2>
                     <p>Dominateur du football allemand et redoutable en Europe.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
@@ -98,7 +109,7 @@
                     <div class="image-wrapper">
                         <img src="images/logo_foot/paris_sg.png" alt="PSG" class="team-logo">
                     </div>
-                    <h3>Paris SG</h3>
+                    <h2>Paris SG</h2>
                     <p>Club français ambitieux avec des stars internationales.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
@@ -108,7 +119,7 @@
                     <div class="image-wrapper">
                         <img src="images/logo_foot/chelsea.png" alt="Chelsea" class="team-logo">
                     </div>
-                    <h3>Chelsea</h3>
+                    <h2>Chelsea</h2>
                     <p>Club londonien habitué aux grandes compétitions européennes.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
@@ -118,7 +129,7 @@
                     <div class="image-wrapper">
                         <img src="images/logo_foot/juventus.png" alt="Juventus" class="team-logo">
                     </div>
-                    <h3>Juventus</h3>
+                    <h2>Juventus</h2>
                     <p>Grand club italien avec une riche histoire.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
@@ -128,7 +139,7 @@
                     <div class="image-wrapper">
                         <img src="images/logo_foot/ac_milan.png" alt="AC Milan" class="team-logo">
                     </div>
-                    <h3>AC Milan</h3>
+                    <h2>AC Milan</h2>
                     <p>Club emblématique du football européen.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
@@ -138,12 +149,25 @@
                     <div class="image-wrapper">
                         <img src="images/logo_foot/inter_milan.png" alt="Inter Milan" class="team-logo">
                     </div>
-                    <h3>Inter Milan</h3>
+                    <h2>Inter Milan</h2>
                     <p>Rival historique de l’AC Milan avec un palmarès impressionnant.</p>
                     <a href="#" class="button">Voir l'équipe</a>
                 </article>
 
             </section>
+        </div>
+
+        <div class="filter-container" style="text-align:center; margin-bottom:20px;">
+            <label for="teamFilter">Filtrer par pays :</label>
+
+            <select id="teamFilter">
+                <option value="all">Tous</option>
+                <option value="spain">Espagne</option>
+                <option value="england">Angleterre</option>
+                <option value="germany">Allemagne</option>
+                <option value="france">France</option>
+                <option value="italy">Italie</option>
+            </select>
         </div>
     </main>
 
@@ -157,14 +181,6 @@
     </footer>
 
 </div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 
 </body>
 </html>
