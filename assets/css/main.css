@@ -1921,6 +1921,23 @@ ul.icons.social-inline {
 		ul.icons.social-inline li a .extra {
 			display: none;
 		}
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2.5em;
+			height: 2.5em;
+			background-color: gray;
+			border-radius: 6px;
+			color: #fff;
+		}
+		ul.icons.social-inline li a:hover {
+			background-color: #76c3ef;
+			color: #001a3a;
+		}
+		ul.icons.social-inline li a .extra {
+			display: none;
+		}
+
 
 /* Menu */
 
@@ -2137,7 +2154,7 @@ ul.icons.social-inline {
 			background: #f6f8fb url("images/image-wrapper.svg");
 		}
 
-	#header-wrapper {
+	#header {
     position: relative;
     padding: 4em 0 2em 0;
     background-image: url("images/terrain.png");
@@ -2147,7 +2164,7 @@ ul.icons.social-inline {
     background-color: transparent;
 }
 
-	.homepage #header-wrapper {
+	.homepage #header {
 		padding: 10em 0 6em 0;
 		background-size: cover;
 	}
@@ -2162,7 +2179,7 @@ ul.icons.social-inline {
 		padding: 6em 0 6em 0;
 	}
 
-	#footer-wrapper {
+	#footer {
     position: relative;
     border-top: solid 1px #e6e6e6;
     padding: 1em 0 ;
@@ -2225,25 +2242,27 @@ ul.icons.social-inline {
 				}
 
 				#nav > ul > li > span, #nav > ul > li > a {
-					color: #fff;
-					text-decoration: none;
-					outline: 0;
-					border: 0;
-					border: solid 1px rgba(255, 255, 255, 0);
-					border-radius: 0.35em;
-					padding: 0.3em 1em 0.3em 1em;
-					-moz-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					-webkit-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					-o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					-ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-					transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-				}
+                    color: #000000;
+                    text-decoration: none;
+                    outline: 0;
+                    border: 0;
+                    border: solid 1px rgba(255, 255, 255, 0);
+                    border-radius: 0.35em;
+                    padding: 0.3em 1em 0.3em 1em;
+                    -moz-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    -webkit-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    -o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    -ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                    transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                     background-color: rgba(255, 255, 255, 0.295);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(20, 154, 235, 0.7);
+                    font-weight: 500;
+                }
 
-				#nav > ul > li.active > span, #nav > ul > li.active > a {
-					border-color: rgba(255, 255, 255, 0.75);
-					background-color: rgba(255, 255, 255, 0.15);
-					color: #fff;
-				}
+				 #nav > ul > li.active > span, #nav > ul > li.active > a, #nav > ul > li > span, #nav > ul > li > a:hover {
+                    background-color: rgba(0, 0, 0, 0.678);
+                    color: #fff;
+                }
 
 				#nav > ul > li:first-child {
 					margin-left: 0;
@@ -2460,11 +2479,11 @@ ul.icons.social-inline {
 				padding: 5em 0 5em 0;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 2em 0 2em 0;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 8em 0 4em 0;
 			}
 
@@ -2472,7 +2491,7 @@ ul.icons.social-inline {
 				padding: 5em 0 5em 0;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 5em 0 5em 0;
 			}
 
@@ -2505,11 +2524,11 @@ ul.icons.social-inline {
 				padding: 4em 2em 4em 2em;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 5em 0 1em 0;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 5em 0 4em 0;
 			}
 
@@ -2517,7 +2536,7 @@ ul.icons.social-inline {
 				padding: 2em;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 4em 2em 4em 2em;
 			}
 
@@ -2740,12 +2759,12 @@ ul.icons.social-inline {
 				padding: 3em 20px 3em 20px;
 			}
 
-			#header-wrapper {
+			#header {
 				padding: 3em 20px 20px 20px;
 				text-align: center;
 			}
 
-			.homepage #header-wrapper {
+			.homepage #header {
 				padding: 3em 20px 3em 20px;
 			}
 
@@ -2753,7 +2772,7 @@ ul.icons.social-inline {
 				padding: 20px;
 			}
 
-			#footer-wrapper {
+			#footer {
 				padding: 3em 20px 3em 20px;
 			}
 
@@ -3158,7 +3177,557 @@ ul.icons.social-inline {
 .feature-card {
     border: 1px solid rgba(0,0,0,0.05);
 }
-/* --- NEWSLETTER SECTION --- */
+
+/* Composition */
+.player-card figcaption {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+	right: 12px; 
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    color: #fff;
+}
+.player-card {
+    width: 200px !important;
+    border-radius: 16px;
+    position: relative;
+    background: linear-gradient(135deg, #b0c4e8 0%, #5ea78b 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+.player-card:hover {
+    transform: translateY(-6px);
+}
+.player-card img {
+    width: 100% !important;
+    display: block;
+}
+.player-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+    border-radius: 0 0 16px 16px;
+}
+.player-number {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.player-name {
+    font-weight: bold;
+}
+.composition-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0 !important;
+}
+.composition-row li{
+	list-style: none;
+}
+#composition{
+	margin: 50px;
+}
+
+/* CSS spécifique billeterie */
+/* HERO Billetterie */
+.billeterie{
+	margin: 50px;
+}
+#hero-billeterie {
+    background: url("images/stade.jpg") center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#hero-billeterie .overlay {
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#hero-billeterie h1 {
+    color: white;
+    font-size: 3em;
+}
+
+#hero-billeterie p {
+    color: #ddd;
+}
+.billetterie-container {
+    padding: 50px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.match-card-billetterie {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.match-card-billetterie input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+.match-card-billetterie button {
+    background: #00c2ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.popup-confirmation-bill {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+
+.popup-confirmation-bill:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-box-bill {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+/* Layout billetterie */
+#ticketType {
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    padding: 10px 12px;
+    font-size: 0.95em;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+#ticketType:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
+}
+.match-list,
+.ticket-form {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+/* Titre bloc */
+.match-list h2,
+.ticket-form h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.6em;
+}
+
+/* Texte intro */
+.match-list p {
+    color: #6b7280;
+    margin-bottom: 1.5em;
+}
+
+/* Cartes de matchs */
+.match-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafbff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    border: 1px solid #e4e7eb;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.match-card:hover {
+    border-color: #2563eb;
+    background: #f8faff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.match-teams {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.match-meta {
+    font-size: 0.9em;
+    color: #6b7280;
+}
+
+.match-price {
+    font-size: 1em;
+    font-weight: 600;
+    color: #0b5ed7;
+}
+
+/* Badge catégorie */
+.badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 3px 10px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.75em;
+}
+
+/* Formulaire */
+.ticket-form label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.ticket-form input,
+.ticket-form select {
+    width: 100%;
+    border-radius: 10px !important;
+    border: 1px solid #d1d5db !important;
+    background: #f9fafb !important;
+    padding: 10px 12px !important;
+    font-size: 0.95em;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+.ticket-form input:focus,
+.ticket-form select:focus {
+    border-color: #2563eb !important;
+    background: #ffffff !important;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
+}
+
+/* Résumé match sélectionné */
+.summary {
+    background: #f3f4f6;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #4b5563;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+/* Bouton */
+.ticket-form button {
+    width: 100%;
+    background: #2563eb !important;
+    color: white !important;
+    font-weight: 600;
+    padding: 12px 0;
+    font-size: 1em;
+    border-radius: 10px;
+    border: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.ticket-form button:hover {
+    background: #1d4ed8 !important;
+}
+/* ============================
+   Alerte de réservation (toast)
+   ============================ */
+   .ticket-alert {
+	position: fixed;
+	top: -80px; /* caché de base */
+	left: 50%;
+	transform: translateX(-50%);
+	background: #0b5ed7;
+	color: white;
+	padding: 16px 26px;
+	border-radius: 14px;
+	font-size: 0.95em;
+	font-weight: 500;
+	box-shadow: 0 8px 25px rgba(11, 94, 215, 0.35);
+	opacity: 0;
+	transition: all 0.5s ease;
+	z-index: 99999;
+	text-align: center;
+	max-width: 90%;
+  }
+  
+  .ticket-alert strong {
+	font-size: 1.05em;
+	display: block;
+	margin-bottom: 6px;
+  }
+  
+  .ticket-alert.show {
+	top: 25px;
+	opacity: 1;
+  }
+  /* ==========================================================================
+   FIL D’ARIANE (Breadcrumb)
+   ========================================================================== */
+.breadcrumb {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5em 0 0 75px;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "›";
+    margin-left: 0.5em;
+}
+
+.breadcrumb a {
+    color: #76c3ef;
+    border: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+    color: #52575c;
+}
+
+
+/* ==========================================================================
+   BILLETERIE — LISTE MATCHS
+   ========================================================================== */
+
+.match-list {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 2em;
+}
+
+.match-list h1 {
+    margin-bottom: 0.6em;
+    font-size: 1.8em;
+}
+
+.match-list p {
+    margin-bottom: 1.5em;
+    opacity: 0.85;
+}
+
+.match-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.match-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafbff;
+    border: 1px solid #e4e7eb;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.match-card:hover,
+.match-card.selected {
+    border-color: #2563eb;
+    background: #f1f6ff;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.match-teams {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #1f2937;
+}
+
+.match-meta {
+    font-size: 0.9em;
+    color: #6b7280;
+}
+
+.badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 3px 10px;
+    border-radius: 30px;
+    font-size: 0.75em;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.match-price {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+
+/* ==========================================================================
+   BILLETERIE — FORMULAIRE
+   ========================================================================== */
+
+.ticket-form {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.ticket-form h2 {
+    margin-bottom: 1em;
+}
+
+.ticket-form fieldset {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 1.5em;
+}
+
+.ticket-form legend {
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.ticket-form label {
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+}
+
+.ticket-form input,
+.ticket-form select {
+    width: 100%;
+    padding: 10px 12px;
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+}
+
+.ticket-form input:focus,
+.ticket-form select:focus {
+    border-color: #2563eb;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
+}
+
+.ticket-form button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1em;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.ticket-form button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================================================
+   BILLETERIE — TOAST / ALERTE
+   ========================================================================== */
+
+.ticket-alert {
+    position: fixed;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0b5ed7;
+    color: white;
+    padding: 16px 26px;
+    border-radius: 12px;
+    font-size: 0.95em;
+    font-weight: 500;
+    box-shadow: 0 8px 25px rgba(11, 94, 215, 0.35);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 9999;
+    max-width: 90%;
+    text-align: center;
+    line-height: 1.4em;
+}
+
+.ticket-alert.show {
+    top: 25px;
+    opacity: 1;
+}
+
+.ticket-alert .alert-title {
+    font-weight: 700;
+    margin: 0;
+}
+
+.ticket-alert .alert-line {
+    margin: 0.2em 0;
+}
+
+.ticket-alert .alert-footer {
+    opacity: 0.85;
+    font-size: 0.9em;
+}
+
+
+/* ==========================================================================
+   FOOTER — NEWSLETTER ET ICONES
+   ========================================================================== */
 
 .newsletter {
     background: none;
@@ -3182,14 +3751,124 @@ ul.icons.social-inline {
     flex: 1;
     padding: 12px;
     border-radius: 6px;
+}
+.newsletter-form button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
     border: none;
 	background-color: #0066ff;
+	font-size: inherit;
 }
-.newsletter-form input[type="submit"]:hover {
+.newsletter-form button[type="submit"]:hover {
     background-color: grey;
 	color: white;
 }
 .mention {
     font-size: 0.85rem;
     opacity: 0.8;
+}
+/* Palmarès */
+#palmares {
+    margin: 50px;
+}
+
+.trophy-grid {
+    display: flex !important;
+    gap: 20px;
+    padding: 20px 0 !important;
+	flex-wrap: wrap;
+}
+
+.trophy-grid li {
+    list-style: none;
+}
+
+.trophy-card {
+    width: 200px;
+    padding: 24px 16px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1a3a5c 0%, #0d2240 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+}
+
+.trophy-count {
+    font-size: 2.8em;
+    font-weight: 600;
+    line-height: 1;
+	display: block;
+}
+
+.trophy-name {
+    display: block;
+    opacity: 0.85;
+    line-height: 1.3;
+}
+.palmares-bloc {
+    margin-bottom: 2.5em;
+}
+
+.palmares-bloc h3 {
+    border-left: 4px solid #c9a84c; 
+    padding-left: 10px;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.trophy-years {
+    display: block;
+    font-size: 0.75em;
+    color: #aaa;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.trophy-special .trophy-count {
+    font-size: 1.8em;
+}
+/*BARRE DE RECHERCHE*/
+
+#search-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+
+#search-bar input {
+  height: 45px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  background: #fff;
+}
+
+#search-bar button {
+  height: 45px;
+  padding: 0 14px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+#search-bar button:hover {
+  background: #005fcc;
+}
+@media screen and (max-width: 1080px) {
+  #search-bar {
+    position: relative;
+    top: auto;
+    right: auto;
+    justify-content: center;
+    margin: 0.5em auto 0;
+  }
+  #search-bar input {
+    width: 200px;
+  }
 }
