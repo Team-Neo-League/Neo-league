@@ -3387,36 +3387,32 @@ ul.icons.social-inline {
 
 
 /* Composition */
-.players-grid {
-    padding: 20px 0;
+.player-card figcaption {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px; 
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    color: #fff;
 }
-
-
 .player-card {
-    display: inline-block !important;
     width: 200px !important;
-    height: 260px;
     border-radius: 16px;
-    overflow: hidden;
     position: relative;
     background: linear-gradient(135deg, #b0c4e8 0%, #5ea78b 100%);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     flex-shrink: 0;
-    transition: transform 0.2s;
 }
-
 .player-card:hover {
     transform: translateY(-6px);
 }
-
 .player-card img {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    object-position: top;
     display: block;
 }
-
 .player-card::after {
     content: '';
     position: absolute;
@@ -3427,39 +3423,12 @@ ul.icons.social-inline {
     background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
     border-radius: 0 0 16px 16px;
 }
-
-.player-info {
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    z-index: 2;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    color: #fff;
-}
-
 .player-number {
     font-size: 1.6em;
     font-weight: bold;
-    line-height: 1;
-    color: #fff;
 }
-
-.player-details {
-    display: flex;
-    flex-direction: column;
-}
-
 .player-name {
-    font-size: 0.95em;
     font-weight: bold;
-    color: #fff;
-}
-
-.player-position {
-    font-size: 0.78em;
-    color: #ddd;
 }
 .composition-row {
     display: flex !important;
@@ -3467,9 +3436,10 @@ ul.icons.social-inline {
     flex-wrap: wrap;
     gap: 20px;
     padding: 10px 0 !important;
-    margin: 0 !important;
 }
-
+.composition-row li{
+    list-style: none;
+}
 #composition{
     margin: 50px;
 }
