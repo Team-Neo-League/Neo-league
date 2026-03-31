@@ -4413,3 +4413,14 @@ section.features {
   height: 120px;
   object-fit: contain;
 }
+#logo-header {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    border: none;
+    z-index: 2;
+}
+
+#logo-header img {
+    display: block;
+}
