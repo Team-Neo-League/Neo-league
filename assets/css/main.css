@@ -2143,14 +2143,12 @@ ul.icons.social-inline {
   .image-wrapper.first:before {
    content: '';
    display: block;
-   width: 2000%;
    height: 100%;
    position: absolute;
-   left: -1000%;
+   width: 100%;
+   left: 0;   
    top: 0;
-   z-index: 1;
-   box-shadow: inset 0px 0px 0px 1px #e8e8e8;
-   background: #f6f8fb url("images/image-wrapper.svg");
+   z-index: 1;   
   }
 
 	#header {
@@ -4324,6 +4322,7 @@ html {
 .img-butteur {
     max-height: 245px;
     object-fit: contain;
+    background-color: white;
 }
 .match {
     border: 1px solid #76c3ef33;
