@@ -3,6 +3,8 @@
 <head>
     <title>Équipes</title>
     <meta charset="utf-8">
+	<meta name="author" content="Soufiane Boudouh">
+	<meta name="description" content="Page des equipes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="icon" href="images/ballon.png" type="image/png">
@@ -135,7 +137,7 @@
                     </div>
                     <h2>Real Madrid</h2>
                     <p>Club espagnol mythique, multiple vainqueur de la Ligue des Champions.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="realMadrid.html" class="button">Voir l'équipe</a>
                 </article>
 
                 <!-- Barcelone -->
@@ -145,7 +147,7 @@
                     </div>
                     <h2>Barcelone</h2>
                     <p>Club légendaire connu pour son style de jeu basé sur la possession.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="barcelone.html" class="button">Voir l'équipe</a>
                 </article>
 
                 <!-- Manchester City -->
@@ -155,7 +157,7 @@
                     </div>
                     <h2>Manchester City</h2>
                     <p>Équipe dominante en Angleterre avec un jeu offensif spectaculaire.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="manchesterCity.html" class="button">Voir l'équipe</a>
                 </article>
 
                 <!-- Liverpool -->
@@ -165,7 +167,7 @@
                     </div>
                     <h2>Liverpool FC</h2>
                     <p>Club historique avec une ambiance unique à Anfield.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="liverpool.html" class="button">Voir l'équipe</a>
                 </article>
 
                 <!-- Bayern Munich -->
@@ -175,7 +177,7 @@
                     </div>
                     <h2>Bayern Munich</h2>
                     <p>Dominateur du football allemand et redoutable en Europe.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="bayern.html" class="button">Voir l'équipe</a>
                 </article>
 
                 <!-- Paris SG -->
@@ -185,7 +187,7 @@
                     </div>
                     <h2>Paris SG</h2>
                     <p>Club français ambitieux avec des stars internationales.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="psg.html" class="button">Voir l'équipe</a>
                 </article>
 
                 <!-- Chelsea -->
@@ -195,7 +197,7 @@
                     </div>
                     <h2>Chelsea</h2>
                     <p>Club londonien habitué aux grandes compétitions européennes.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="chelsea.html" class="button">Voir l'équipe</a>
                 </article>
 
                 <!-- Juventus -->
@@ -205,7 +207,7 @@
                     </div>
                     <h2>Juventus</h2>
                     <p>Grand club italien avec une riche histoire.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="juventus.html" class="button">Voir l'équipe</a>
                 </article>
 
                 <!-- AC Milan -->
@@ -215,7 +217,7 @@
                     </div>
                     <h2>AC Milan</h2>
                     <p>Club emblématique du football européen.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="acMilan.html" class="button">Voir l'équipe</a>
                 </article>
 
                 <!-- Inter Milan -->
@@ -225,24 +227,26 @@
                     </div>
                     <h2>Inter Milan</h2>
                     <p>Rival historique de l’AC Milan avec un palmarès impressionnant.</p>
-                    <a href="#" class="button">Voir l'équipe</a>
+                    <a href="interMilan.html" class="button">Voir l'équipe</a>
                 </article>
 
             </section>
         </div>
 
-        <div class="filter-container" style="text-align:center; margin-bottom:20px;">
-            <label for="teamFilter">Filtrer par pays :</label>
-
-            <select id="teamFilter">
-                <option value="all">Tous</option>
-                <option value="spain">Espagne</option>
-                <option value="england">Angleterre</option>
-                <option value="germany">Allemagne</option>
-                <option value="france">France</option>
-                <option value="italy">Italie</option>
-            </select>
-        </div>
+        <form class="filter-container" action="#" method="get" style="text-align:center; margin-bottom:20px;">
+	    	<fieldset>
+	        <legend>Filtrer les équipes</legend>
+	        <label for="teamFilter">Filtrer par pays :</label>
+	        <select id="teamFilter" name="pays">
+	            <option value="all">Tous</option>
+	            <option value="spain">Espagne</option>
+	            <option value="england">Angleterre</option>
+	            <option value="germany">Allemagne</option>
+	            <option value="france">France</option>
+	            <option value="italy">Italie</option>
+	        </select>
+	    	</fieldset>
+		</form>
     </main>
 
     <footer id="footer">
