@@ -11,35 +11,7 @@
         <link rel="icon" href="images/ballon.png" type="image/png">
     </head>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        
-            const teams = document.querySelectorAll("#teams .team-card");
-            const perPage = 5;
-            let currentPage = 1;
-        
-            function changePage(page) {
-                currentPage = page;
-        
-                const start = (page - 1) * perPage;
-                const end = start + perPage;
-        
-                teams.forEach((team, index) => {
-                    if (index >= start && index < end) {
-                        team.style.display = "";
-                    } else {
-                        team.style.display = "none";
-                    }
-                });
-            }
-        
-            // rendre la fonction accessible aux boutons
-            window.changePage = changePage;
-        
-            // page 1 au chargement
-            changePage(1);
-        });
-        </script>
+    
 
     <body class="page-equipe left-sidebar is-preload">
 
@@ -320,6 +292,8 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/pagination.js"></script>
+        
 
     </body>
 
