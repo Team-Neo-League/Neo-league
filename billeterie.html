@@ -16,8 +16,8 @@
     <!-- Toast Notification -->
     <div id="reservationAlert" class="ticket-alert" role="status" aria-live="polite"></div>
 
-    <!-- HEADER -->
     <header id="header">
+<<<<<<< HEAD
         <div class="container">
             <p id="logo"><a href="index.html">Accueil</a></p>
             <nav id="nav">
@@ -108,18 +108,108 @@
             </form>
         </div>
     </header>
+=======
+                <div class="container">
+                    <p id="accueilHeader"><a href="index.html">Accueil</a></p>
 
-    <!-- Fil d'Ariane -->
-    <nav aria-label="Fil d'Ariane" class="breadcrumb">
-        <ol>
-            <li><a href="index.html">Accueil</a></li>
-            <li aria-current="page">Billetterie</li>
-        </ol>
-    </nav>
+							<nav id="nav">
+								<ul>
+									<li>
+										<a href="equipes.html">Equipes</a>
+										<ul>
+											<li>
+												<a href="realMadrid.html">Real Madrid</a>
+												<ul>
+													<li><a href="realMadrid.html#composition">Composition</a></li>
+													<li><a href="realMadrid.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="barcelone.html">Barcelone</a>
+												<ul>
+													<li><a href="barcelone.html#composition">Composition</a></li>
+													<li><a href="barcelone.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="chelsea.html">Chelsea</a>
+												<ul>
+													<li><a href="chelsea.html#composition">Composition</a></li>
+													<li><a href="chelsea.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="psg.html">Paris SG</a>
+												<ul>
+													<li><a href="psg.html#composition">Composition</a></li>
+													<li><a href="psg.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="manchesterCity.html">Manchester City</a>
+												<ul>
+													<li><a href="manchesterCity.html#composition">Composition</a></li>
+													<li><a href="manchesterCity.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="bayern.html">Bayern Munich</a>
+												<ul>
+													<li><a href="bayern.html#composition">Composition</a></li>
+													<li><a href="bayern.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="liverpool.html">Liverpool FC</a>
+												<ul>
+													<li><a href="liverpool.html#composition">Composition</a></li>
+													<li><a href="liverpool.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="juventus.html">Juventus</a>
+												<ul>
+													<li><a href="juventus.html#composition">Composition</a></li>
+													<li><a href="juventus.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="acMilan.html">AC Milan</a>
+												<ul>
+													<li><a href="acMilan.html#composition">Composition</a></li>
+													<li><a href="acMilan.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="interMilan.html">Inter Milan</a>
+												<ul>
+													<li><a href="interMilan.html#composition">Composition</a></li>
+													<li><a href="interMilan.html#palmares">Palmarès</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="classement.html">Classement</a></li>
+									<li class="break"><a href="billeterie.html">Billeterie</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</nav>
+                        <form id="search-bar" action="#" method="get">
+							<label for="search-input" class="visually-hidden">Rechercher</label>
+							<input type="text" id="search-input" name="q" placeholder="Rechercher...">
+							<button type="submit">🔍</button>
+						</form>	
+                </div>
+            </header>
+>>>>>>> c395a95bcc4f06dd56b816cb4867e1091bc99ac4
 
-    <!-- MAIN -->
     <main style="margin: 50px;">
-
+        <nav aria-label="Fil d'Ariane" class="breadcrumb">
+            <ol>
+                <li><a href="index.html">Accueil</a></li>
+                <li aria-current="page">Billetterie</li>
+            </ol>
+        </nav>
         <!-- LISTE DES MATCHS -->
         <section class="match-list">
             <h2>Billetterie Neo League</h2>
@@ -226,6 +316,7 @@
         </section>
     </main>
 
+<<<<<<< HEAD
     <!-- FOOTER -->
     <footer id="footer">
         <div class="container">
@@ -265,6 +356,49 @@
     </footer>
 
     <!-- SCRIPT -->
+=======
+    	    	<footer id="footer">
+                <div class="container">
+                    <section class="newsletter">
+                        <h3>Newsletter</h3>
+                        <p class="intro">Restez informé.</p>
+                        <form class="newsletter-form" method="post" action="#">
+							<label for="newsletter-email" class="visually-hidden">Adresse e-mail</label>
+							<input type="email" id="newsletter-email" name="email"
+								placeholder="Votre adresse e-mail" required>
+
+							<label for="newsletter-prenom" class="visually-hidden">Prénom</label>
+							<input type="text" id="newsletter-prenom" name="prenom"
+								placeholder="Prénom" required>
+
+							<button type="submit">S'inscrire →</button>
+						</form>
+                        <p class="mention">Aucun spam. Désabonnement possible à tout moment.</p>
+                    </section>
+
+                    <ul class="icons social-inline">
+                        <li><a href="https://x.com/i/flow/login" target="_blank" class="icon brands fa-twitter"><span
+                                    class="extra">twitter.com/</span></a></li>
+                        <li><a href="https://www.facebook.com/login" target="_blank" class="icon brands fa-facebook-f"><span
+                                    class="extra">facebook.com/</span></a></li>
+                        <li><a href="https://www.instagram.com/accounts/login" target="_blank"
+                                class="icon brands fa-instagram"><span class="extra">instagram.com/</span></a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank" class="icon brands fa-youtube"><span
+                                    class="extra">youtube.com/</span></a></li>
+                    </ul>
+                </div>
+                <div id="copyright" class="container">
+                    <ul class="menu">
+                        <li>&copy;Neo League</li>
+                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                    <a href="index.html">
+                        <img src="images/ballon.png" alt="logo neo league" width="108" height="100"
+                            style="display: block; margin: auto;">
+                    </a>
+                </div>
+            </footer>
+>>>>>>> c395a95bcc4f06dd56b816cb4867e1091bc99ac4
     <script>
         const matchCards = document.querySelectorAll(".match-card");
         const matchSummary = document.getElementById("matchSummary");
