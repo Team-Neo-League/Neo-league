@@ -4423,3 +4423,39 @@ section.features {
 #logo-header img {
     display: block;
 }
+
+.pagination {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .filter-container {
+    display: flex;                /* pour aligner label + select si besoin */ 
+    flex-direction: column;       /* colonne verticale */
+    align-items: center;          /* centre le contenu horizontalement */
+    max-width: 300px;             /* largeur limitée */
+    margin: 0 auto 2em auto;      /* centre la boîte + margin-bottom */
+    padding: 20px;                /* padding comme les cards */
+    background: #fff;             /* fond blanc comme les cards */
+    border-radius: var(--radius); /* coins arrondis */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* même ombre que les cards */
+    text-align: center;
+}
+
+.filter-container select {
+    padding: 10px;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.filter-container select:hover {
+    border-color: var(--primary);
+}
