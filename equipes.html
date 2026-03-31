@@ -11,6 +11,36 @@
         <link rel="icon" href="images/ballon.png" type="image/png">
     </head>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        
+            const teams = document.querySelectorAll("#teams .team-card");
+            const perPage = 5;
+            let currentPage = 1;
+        
+            function changePage(page) {
+                currentPage = page;
+        
+                const start = (page - 1) * perPage;
+                const end = start + perPage;
+        
+                teams.forEach((team, index) => {
+                    if (index >= start && index < end) {
+                        team.style.display = "";
+                    } else {
+                        team.style.display = "none";
+                    }
+                });
+            }
+        
+            // rendre la fonction accessible aux boutons
+            window.changePage = changePage;
+        
+            // page 1 au chargement
+            changePage(1);
+        });
+        </script>
+
     <body class="page-equipe left-sidebar is-preload">
 
         <div id="page-wrapper">
@@ -127,7 +157,7 @@
                     </header>
 
 
-                    <section class="row features">
+                    <section class="row features" id="teams">
 
 
                         <article class="col-4 col-12-narrower feature team-card">
@@ -221,6 +251,10 @@
                         </article>
 
                     </section>
+                    <div class="pagination">
+                        <button onclick="changePage(1)">1</button>
+                        <button onclick="changePage(2)">2</button>
+                    </div>
                 </div>
 
                 <form class="filter-container" action="#" method="get" style="text-align:center; margin-bottom:20px;">
